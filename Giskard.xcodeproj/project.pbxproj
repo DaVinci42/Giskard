@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		69A7B4101E693DA10099C735 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B40F1E693DA10099C735 /* main.m */; };
+		69A7B4131E693DA10099C735 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B4121E693DA10099C735 /* AppDelegate.m */; };
+		69A7B4161E693DA10099C735 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B4151E693DA10099C735 /* ViewController.m */; };
+		69A7B4191E693DA10099C735 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A7B4171E693DA10099C735 /* Main.storyboard */; };
+		69A7B41C1E693DA10099C735 /* Giskard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B41A1E693DA10099C735 /* Giskard.xcdatamodeld */; };
+		69A7B41E1E693DA10099C735 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69A7B41D1E693DA10099C735 /* Assets.xcassets */; };
+		69A7B4211E693DA10099C735 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A7B41F1E693DA10099C735 /* LaunchScreen.storyboard */; };
+		69A7B42C1E693DA10099C735 /* GiskardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B42B1E693DA10099C735 /* GiskardTests.m */; };
+		69A7B4371E693DA10099C735 /* GiskardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B4361E693DA10099C735 /* GiskardUITests.m */; };
+		69A7B4461E693DDF0099C735 /* ArticleTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B4451E693DDF0099C735 /* ArticleTableTableViewController.m */; };
+		69A7B4491E693EFF0099C735 /* ArticleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B4481E693EFF0099C735 /* ArticleTableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		69A7B4281E693DA10099C735 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69A7B4031E693DA10099C735 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69A7B40A1E693DA10099C735;
+			remoteInfo = Giskard;
+		};
+		69A7B4331E693DA10099C735 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69A7B4031E693DA10099C735 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69A7B40A1E693DA10099C735;
+			remoteInfo = Giskard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		69A7B40B1E693DA10099C735 /* Giskard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giskard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		69A7B40F1E693DA10099C735 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		69A7B4111E693DA10099C735 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		69A7B4121E693DA10099C735 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		69A7B4141E693DA10099C735 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		69A7B4151E693DA10099C735 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		69A7B4181E693DA10099C735 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		69A7B41B1E693DA10099C735 /* Giskard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Giskard.xcdatamodel; sourceTree = "<group>"; };
+		69A7B41D1E693DA10099C735 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		69A7B4201E693DA10099C735 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		69A7B4221E693DA10099C735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69A7B4271E693DA10099C735 /* GiskardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiskardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69A7B42B1E693DA10099C735 /* GiskardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GiskardTests.m; sourceTree = "<group>"; };
+		69A7B42D1E693DA10099C735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69A7B4321E693DA10099C735 /* GiskardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiskardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69A7B4361E693DA10099C735 /* GiskardUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GiskardUITests.m; sourceTree = "<group>"; };
+		69A7B4381E693DA10099C735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69A7B4441E693DDF0099C735 /* ArticleTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleTableTableViewController.h; sourceTree = "<group>"; };
+		69A7B4451E693DDF0099C735 /* ArticleTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleTableTableViewController.m; sourceTree = "<group>"; };
+		69A7B4471E693EFF0099C735 /* ArticleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleTableViewCell.h; sourceTree = "<group>"; };
+		69A7B4481E693EFF0099C735 /* ArticleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleTableViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69A7B4081E693DA10099C735 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69A7B4241E693DA10099C735 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69A7B42F1E693DA10099C735 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		69A7B4021E693DA10099C735 = {
+			isa = PBXGroup;
+			children = (
+				69A7B40D1E693DA10099C735 /* Giskard */,
+				69A7B42A1E693DA10099C735 /* GiskardTests */,
+				69A7B4351E693DA10099C735 /* GiskardUITests */,
+				69A7B40C1E693DA10099C735 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		69A7B40C1E693DA10099C735 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				69A7B40B1E693DA10099C735 /* Giskard.app */,
+				69A7B4271E693DA10099C735 /* GiskardTests.xctest */,
+				69A7B4321E693DA10099C735 /* GiskardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		69A7B40D1E693DA10099C735 /* Giskard */ = {
+			isa = PBXGroup;
+			children = (
+				69A7B4111E693DA10099C735 /* AppDelegate.h */,
+				69A7B4121E693DA10099C735 /* AppDelegate.m */,
+				69A7B4441E693DDF0099C735 /* ArticleTableTableViewController.h */,
+				69A7B4451E693DDF0099C735 /* ArticleTableTableViewController.m */,
+				69A7B4471E693EFF0099C735 /* ArticleTableViewCell.h */,
+				69A7B4481E693EFF0099C735 /* ArticleTableViewCell.m */,
+				69A7B4141E693DA10099C735 /* ViewController.h */,
+				69A7B4151E693DA10099C735 /* ViewController.m */,
+				69A7B4171E693DA10099C735 /* Main.storyboard */,
+				69A7B41D1E693DA10099C735 /* Assets.xcassets */,
+				69A7B41F1E693DA10099C735 /* LaunchScreen.storyboard */,
+				69A7B4221E693DA10099C735 /* Info.plist */,
+				69A7B41A1E693DA10099C735 /* Giskard.xcdatamodeld */,
+				69A7B40E1E693DA10099C735 /* Supporting Files */,
+			);
+			path = Giskard;
+			sourceTree = "<group>";
+		};
+		69A7B40E1E693DA10099C735 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				69A7B40F1E693DA10099C735 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		69A7B42A1E693DA10099C735 /* GiskardTests */ = {
+			isa = PBXGroup;
+			children = (
+				69A7B42B1E693DA10099C735 /* GiskardTests.m */,
+				69A7B42D1E693DA10099C735 /* Info.plist */,
+			);
+			path = GiskardTests;
+			sourceTree = "<group>";
+		};
+		69A7B4351E693DA10099C735 /* GiskardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				69A7B4361E693DA10099C735 /* GiskardUITests.m */,
+				69A7B4381E693DA10099C735 /* Info.plist */,
+			);
+			path = GiskardUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		69A7B40A1E693DA10099C735 /* Giskard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69A7B43B1E693DA10099C735 /* Build configuration list for PBXNativeTarget "Giskard" */;
+			buildPhases = (
+				69A7B4071E693DA10099C735 /* Sources */,
+				69A7B4081E693DA10099C735 /* Frameworks */,
+				69A7B4091E693DA10099C735 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Giskard;
+			productName = Giskard;
+			productReference = 69A7B40B1E693DA10099C735 /* Giskard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		69A7B4261E693DA10099C735 /* GiskardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69A7B43E1E693DA10099C735 /* Build configuration list for PBXNativeTarget "GiskardTests" */;
+			buildPhases = (
+				69A7B4231E693DA10099C735 /* Sources */,
+				69A7B4241E693DA10099C735 /* Frameworks */,
+				69A7B4251E693DA10099C735 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69A7B4291E693DA10099C735 /* PBXTargetDependency */,
+			);
+			name = GiskardTests;
+			productName = GiskardTests;
+			productReference = 69A7B4271E693DA10099C735 /* GiskardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		69A7B4311E693DA10099C735 /* GiskardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69A7B4411E693DA10099C735 /* Build configuration list for PBXNativeTarget "GiskardUITests" */;
+			buildPhases = (
+				69A7B42E1E693DA10099C735 /* Sources */,
+				69A7B42F1E693DA10099C735 /* Frameworks */,
+				69A7B4301E693DA10099C735 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69A7B4341E693DA10099C735 /* PBXTargetDependency */,
+			);
+			name = GiskardUITests;
+			productName = GiskardUITests;
+			productReference = 69A7B4321E693DA10099C735 /* GiskardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		69A7B4031E693DA10099C735 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Dan Xin";
+				TargetAttributes = {
+					69A7B40A1E693DA10099C735 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					69A7B4261E693DA10099C735 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 69A7B40A1E693DA10099C735;
+					};
+					69A7B4311E693DA10099C735 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 69A7B40A1E693DA10099C735;
+					};
+				};
+			};
+			buildConfigurationList = 69A7B4061E693DA10099C735 /* Build configuration list for PBXProject "Giskard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 69A7B4021E693DA10099C735;
+			productRefGroup = 69A7B40C1E693DA10099C735 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69A7B40A1E693DA10099C735 /* Giskard */,
+				69A7B4261E693DA10099C735 /* GiskardTests */,
+				69A7B4311E693DA10099C735 /* GiskardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69A7B4091E693DA10099C735 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69A7B4211E693DA10099C735 /* LaunchScreen.storyboard in Resources */,
+				69A7B41E1E693DA10099C735 /* Assets.xcassets in Resources */,
+				69A7B4191E693DA10099C735 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69A7B4251E693DA10099C735 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69A7B4301E693DA10099C735 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		69A7B4071E693DA10099C735 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69A7B4161E693DA10099C735 /* ViewController.m in Sources */,
+				69A7B41C1E693DA10099C735 /* Giskard.xcdatamodeld in Sources */,
+				69A7B4461E693DDF0099C735 /* ArticleTableTableViewController.m in Sources */,
+				69A7B4131E693DA10099C735 /* AppDelegate.m in Sources */,
+				69A7B4491E693EFF0099C735 /* ArticleTableViewCell.m in Sources */,
+				69A7B4101E693DA10099C735 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69A7B4231E693DA10099C735 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69A7B42C1E693DA10099C735 /* GiskardTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69A7B42E1E693DA10099C735 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69A7B4371E693DA10099C735 /* GiskardUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		69A7B4291E693DA10099C735 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69A7B40A1E693DA10099C735 /* Giskard */;
+			targetProxy = 69A7B4281E693DA10099C735 /* PBXContainerItemProxy */;
+		};
+		69A7B4341E693DA10099C735 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69A7B40A1E693DA10099C735 /* Giskard */;
+			targetProxy = 69A7B4331E693DA10099C735 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		69A7B4171E693DA10099C735 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69A7B4181E693DA10099C735 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		69A7B41F1E693DA10099C735 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69A7B4201E693DA10099C735 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		69A7B4391E693DA10099C735 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		69A7B43A1E693DA10099C735 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		69A7B43C1E693DA10099C735 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Giskard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = davinci42.com.Giskard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		69A7B43D1E693DA10099C735 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Giskard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = davinci42.com.Giskard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		69A7B43F1E693DA10099C735 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GiskardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = davinci42.com.GiskardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Giskard.app/Giskard";
+			};
+			name = Debug;
+		};
+		69A7B4401E693DA10099C735 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GiskardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = davinci42.com.GiskardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Giskard.app/Giskard";
+			};
+			name = Release;
+		};
+		69A7B4421E693DA10099C735 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GiskardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = davinci42.com.GiskardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Giskard;
+			};
+			name = Debug;
+		};
+		69A7B4431E693DA10099C735 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GiskardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = davinci42.com.GiskardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Giskard;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		69A7B4061E693DA10099C735 /* Build configuration list for PBXProject "Giskard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69A7B4391E693DA10099C735 /* Debug */,
+				69A7B43A1E693DA10099C735 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69A7B43B1E693DA10099C735 /* Build configuration list for PBXNativeTarget "Giskard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69A7B43C1E693DA10099C735 /* Debug */,
+				69A7B43D1E693DA10099C735 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		69A7B43E1E693DA10099C735 /* Build configuration list for PBXNativeTarget "GiskardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69A7B43F1E693DA10099C735 /* Debug */,
+				69A7B4401E693DA10099C735 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		69A7B4411E693DA10099C735 /* Build configuration list for PBXNativeTarget "GiskardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69A7B4421E693DA10099C735 /* Debug */,
+				69A7B4431E693DA10099C735 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		69A7B41A1E693DA10099C735 /* Giskard.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				69A7B41B1E693DA10099C735 /* Giskard.xcdatamodel */,
+			);
+			currentVersion = 69A7B41B1E693DA10099C735 /* Giskard.xcdatamodel */;
+			path = Giskard.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 69A7B4031E693DA10099C735 /* Project object */;
+}
