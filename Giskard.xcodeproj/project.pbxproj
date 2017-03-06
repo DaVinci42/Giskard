@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		69A7B4101E693DA10099C735 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B40F1E693DA10099C735 /* main.m */; };
 		69A7B4131E693DA10099C735 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B4121E693DA10099C735 /* AppDelegate.m */; };
-		69A7B4161E693DA10099C735 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B4151E693DA10099C735 /* ViewController.m */; };
 		69A7B4191E693DA10099C735 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A7B4171E693DA10099C735 /* Main.storyboard */; };
 		69A7B41C1E693DA10099C735 /* Giskard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B41A1E693DA10099C735 /* Giskard.xcdatamodeld */; };
 		69A7B41E1E693DA10099C735 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69A7B41D1E693DA10099C735 /* Assets.xcassets */; };
@@ -18,6 +17,7 @@
 		69A7B4371E693DA10099C735 /* GiskardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B4361E693DA10099C735 /* GiskardUITests.m */; };
 		69A7B4461E693DDF0099C735 /* ArticleTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B4451E693DDF0099C735 /* ArticleTableTableViewController.m */; };
 		69A7B4491E693EFF0099C735 /* ArticleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B4481E693EFF0099C735 /* ArticleTableViewCell.m */; };
+		69A7B44C1E6940F00099C735 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B44B1E6940F00099C735 /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +42,6 @@
 		69A7B40F1E693DA10099C735 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		69A7B4111E693DA10099C735 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		69A7B4121E693DA10099C735 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		69A7B4141E693DA10099C735 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		69A7B4151E693DA10099C735 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		69A7B4181E693DA10099C735 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		69A7B41B1E693DA10099C735 /* Giskard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Giskard.xcdatamodel; sourceTree = "<group>"; };
 		69A7B41D1E693DA10099C735 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +57,8 @@
 		69A7B4451E693DDF0099C735 /* ArticleTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleTableTableViewController.m; sourceTree = "<group>"; };
 		69A7B4471E693EFF0099C735 /* ArticleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleTableViewCell.h; sourceTree = "<group>"; };
 		69A7B4481E693EFF0099C735 /* ArticleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleTableViewCell.m; sourceTree = "<group>"; };
+		69A7B44A1E6940F00099C735 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		69A7B44B1E6940F00099C735 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,13 +115,13 @@
 				69A7B4451E693DDF0099C735 /* ArticleTableTableViewController.m */,
 				69A7B4471E693EFF0099C735 /* ArticleTableViewCell.h */,
 				69A7B4481E693EFF0099C735 /* ArticleTableViewCell.m */,
-				69A7B4141E693DA10099C735 /* ViewController.h */,
-				69A7B4151E693DA10099C735 /* ViewController.m */,
-				69A7B4171E693DA10099C735 /* Main.storyboard */,
 				69A7B41D1E693DA10099C735 /* Assets.xcassets */,
-				69A7B41F1E693DA10099C735 /* LaunchScreen.storyboard */,
-				69A7B4221E693DA10099C735 /* Info.plist */,
 				69A7B41A1E693DA10099C735 /* Giskard.xcdatamodeld */,
+				69A7B44A1E6940F00099C735 /* HomeViewController.h */,
+				69A7B44B1E6940F00099C735 /* HomeViewController.m */,
+				69A7B4221E693DA10099C735 /* Info.plist */,
+				69A7B41F1E693DA10099C735 /* LaunchScreen.storyboard */,
+				69A7B4171E693DA10099C735 /* Main.storyboard */,
 				69A7B40E1E693DA10099C735 /* Supporting Files */,
 			);
 			path = Giskard;
@@ -286,12 +286,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69A7B4161E693DA10099C735 /* ViewController.m in Sources */,
 				69A7B41C1E693DA10099C735 /* Giskard.xcdatamodeld in Sources */,
 				69A7B4461E693DDF0099C735 /* ArticleTableTableViewController.m in Sources */,
 				69A7B4131E693DA10099C735 /* AppDelegate.m in Sources */,
 				69A7B4491E693EFF0099C735 /* ArticleTableViewCell.m in Sources */,
 				69A7B4101E693DA10099C735 /* main.m in Sources */,
+				69A7B44C1E6940F00099C735 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +521,7 @@
 				69A7B43D1E693DA10099C735 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		69A7B43E1E693DA10099C735 /* Build configuration list for PBXNativeTarget "GiskardTests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +530,7 @@
 				69A7B4401E693DA10099C735 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		69A7B4411E693DA10099C735 /* Build configuration list for PBXNativeTarget "GiskardUITests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +539,7 @@
 				69A7B4431E693DA10099C735 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
