@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "ArticleTableTableViewController.h"
+#import "DVCNetClient.h"
 
 @interface HomeViewController ()
 
@@ -21,6 +22,12 @@
 -(void) viewDidLoad {
     _articleTableViewController = [[ArticleTableTableViewController alloc] init];
     [self.view addSubview:_articleTableViewController.view];
+    
+    DVCNetClient *client = [DVCNetClient sharedClient];
+    [client performGetRequest:@"https://jsonplaceholder.typicode.com/posts"
+          withRespondeHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+              NSLog(@"result: %@", responseObject);
+          }];
 }
 
 @end

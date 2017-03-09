@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1E89CD76C4756207D512FEF0 /* libPods-GiskardUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6D0FF46D2499E5B4D68AED /* libPods-GiskardUITests.a */; };
 		69108A601E6E4F1B00C91B24 /* ArticleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69108A5F1E6E4F1B00C91B24 /* ArticleItem.m */; };
+		694CBA9A1E71098700AEB7FD /* DVCNetClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 694CBA991E71098700AEB7FD /* DVCNetClient.m */; };
 		69A7B4101E693DA10099C735 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B40F1E693DA10099C735 /* main.m */; };
 		69A7B4131E693DA10099C735 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B4121E693DA10099C735 /* AppDelegate.m */; };
 		69A7B4191E693DA10099C735 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A7B4171E693DA10099C735 /* Main.storyboard */; };
@@ -47,6 +48,8 @@
 		62A3F245F845B458ABDB8207 /* Pods-GiskardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiskardUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GiskardUITests/Pods-GiskardUITests.release.xcconfig"; sourceTree = "<group>"; };
 		69108A5E1E6E4F1B00C91B24 /* ArticleItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleItem.h; sourceTree = "<group>"; };
 		69108A5F1E6E4F1B00C91B24 /* ArticleItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleItem.m; sourceTree = "<group>"; };
+		694CBA981E71098700AEB7FD /* DVCNetClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVCNetClient.h; sourceTree = "<group>"; };
+		694CBA991E71098700AEB7FD /* DVCNetClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVCNetClient.m; sourceTree = "<group>"; };
 		69A7B40B1E693DA10099C735 /* Giskard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giskard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69A7B40F1E693DA10099C735 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		69A7B4111E693DA10099C735 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -131,6 +134,8 @@
 			children = (
 				69108A5E1E6E4F1B00C91B24 /* ArticleItem.h */,
 				69108A5F1E6E4F1B00C91B24 /* ArticleItem.m */,
+				694CBA981E71098700AEB7FD /* DVCNetClient.h */,
+				694CBA991E71098700AEB7FD /* DVCNetClient.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -498,6 +503,7 @@
 				69A7B4461E693DDF0099C735 /* ArticleTableTableViewController.m in Sources */,
 				69A7B4131E693DA10099C735 /* AppDelegate.m in Sources */,
 				69A7B4491E693EFF0099C735 /* ArticleTableViewCell.m in Sources */,
+				694CBA9A1E71098700AEB7FD /* DVCNetClient.m in Sources */,
 				69A7B4101E693DA10099C735 /* main.m in Sources */,
 				69108A601E6E4F1B00C91B24 /* ArticleItem.m in Sources */,
 				69A7B44C1E6940F00099C735 /* HomeViewController.m in Sources */,
