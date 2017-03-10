@@ -26,6 +26,13 @@ static DVCNetClient *sharedClient = nil;
     return sharedClient;
 }
 
++(NSURLRequest *)generateRequest:(NSString *)url withMethod:(NSString *)method withParameters:(NSDictionary *)parameters {
+    return [[AFHTTPRequestSerializer serializer] requestWithMethod:method
+                                                         URLString:url
+                                                        parameters:parameters
+                                                             error:nil];
+}
+
 -(instancetype)initPrivate {
     self = [super init];
     return self;
