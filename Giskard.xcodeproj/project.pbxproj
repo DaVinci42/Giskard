@@ -10,6 +10,8 @@
 		1E89CD76C4756207D512FEF0 /* libPods-GiskardUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6D0FF46D2499E5B4D68AED /* libPods-GiskardUITests.a */; };
 		69108A601E6E4F1B00C91B24 /* ArticleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69108A5F1E6E4F1B00C91B24 /* ArticleItem.m */; };
 		694CBA9A1E71098700AEB7FD /* DVCNetClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 694CBA991E71098700AEB7FD /* DVCNetClient.m */; };
+		69986A811E724E1300D89455 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69986A801E724E1300D89455 /* LoginViewController.m */; };
+		69986A871E72834F00D89455 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 69986A861E72834F00D89455 /* LoginModel.m */; };
 		69A7B4101E693DA10099C735 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B40F1E693DA10099C735 /* main.m */; };
 		69A7B4131E693DA10099C735 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B4121E693DA10099C735 /* AppDelegate.m */; };
 		69A7B4191E693DA10099C735 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A7B4171E693DA10099C735 /* Main.storyboard */; };
@@ -50,6 +52,11 @@
 		69108A5F1E6E4F1B00C91B24 /* ArticleItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleItem.m; sourceTree = "<group>"; };
 		694CBA981E71098700AEB7FD /* DVCNetClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVCNetClient.h; sourceTree = "<group>"; };
 		694CBA991E71098700AEB7FD /* DVCNetClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVCNetClient.m; sourceTree = "<group>"; };
+		69986A7F1E724E1300D89455 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		69986A801E724E1300D89455 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		69986A841E727BDC00D89455 /* ApiConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiConfig.h; sourceTree = "<group>"; };
+		69986A851E72834F00D89455 /* LoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
+		69986A861E72834F00D89455 /* LoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
 		69A7B40B1E693DA10099C735 /* Giskard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giskard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69A7B40F1E693DA10099C735 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		69A7B4111E693DA10099C735 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -132,10 +139,13 @@
 		69108A611E6E4F4400C91B24 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				69986A851E72834F00D89455 /* LoginModel.h */,
+				69986A861E72834F00D89455 /* LoginModel.m */,
 				69108A5E1E6E4F1B00C91B24 /* ArticleItem.h */,
 				69108A5F1E6E4F1B00C91B24 /* ArticleItem.m */,
 				694CBA981E71098700AEB7FD /* DVCNetClient.h */,
 				694CBA991E71098700AEB7FD /* DVCNetClient.m */,
+				69986A841E727BDC00D89455 /* ApiConfig.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -167,6 +177,8 @@
 			children = (
 				69A7B4111E693DA10099C735 /* AppDelegate.h */,
 				69A7B4121E693DA10099C735 /* AppDelegate.m */,
+				69986A7F1E724E1300D89455 /* LoginViewController.h */,
+				69986A801E724E1300D89455 /* LoginViewController.m */,
 				69A7B4441E693DDF0099C735 /* ArticleTableTableViewController.h */,
 				69A7B4451E693DDF0099C735 /* ArticleTableTableViewController.m */,
 				69108A611E6E4F4400C91B24 /* Model */,
@@ -504,9 +516,11 @@
 				69A7B4131E693DA10099C735 /* AppDelegate.m in Sources */,
 				69A7B4491E693EFF0099C735 /* ArticleTableViewCell.m in Sources */,
 				694CBA9A1E71098700AEB7FD /* DVCNetClient.m in Sources */,
+				69986A811E724E1300D89455 /* LoginViewController.m in Sources */,
 				69A7B4101E693DA10099C735 /* main.m in Sources */,
 				69108A601E6E4F1B00C91B24 /* ArticleItem.m in Sources */,
 				69A7B44C1E6940F00099C735 /* HomeViewController.m in Sources */,
+				69986A871E72834F00D89455 /* LoginModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
