@@ -15,23 +15,13 @@
 
 static DVCNetClient *sharedClient = nil;
 
+static const NSString *kGet = @"GET";
+
+static const NSString *kPost = @"POST";
+
+static const NSDictionary *kHeader = nil;
+
 @implementation DVCNetClient
-
-+(instancetype)sharedClient {
-    if (!sharedClient) {
-        sharedClient = [[DVCNetClient alloc] initPrivate];
-        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-        sharedClient.manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
-    }
-    return sharedClient;
-}
-
-+(NSURLRequest *)generateRequest:(NSString *)url withMethod:(NSString *)method withParameters:(NSDictionary *)parameters {
-    return [[AFHTTPRequestSerializer serializer] requestWithMethod:method
-                                                         URLString:url
-                                                        parameters:parameters
-                                                             error:nil];
-}
 
 -(instancetype)initPrivate {
     self = [super init];
@@ -44,10 +34,50 @@ static DVCNetClient *sharedClient = nil;
                                  userInfo:nil];
 }
 
--(void)performGetRequest:(NSString *)requestUrl withRespondeHandler:(ResponseHandlerBlock)block {
++(instancetype)sharedClient {
+    if (!sharedClient) {
+        sharedClient = [[DVCNetClient alloc] initPrivate];
+        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+        sharedClient.manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    }
+    return sharedClient;
+}
+
++(NSMutableURLRequest *)generateRequest:(NSString *)url withMethod:(NSString *)method withParameters:(NSDictionary *)parameters {
+    return [[AFHTTPRequestSerializer serializer] requestWithMethod:method
+                                                         URLString:url
+                                                        parameters:parameters
+                                                             error:nil];
+}
+
++(NSDictionary *)defaultHeader {
+    return nil;
+}
+
+-(void)performRequest:(NSString *)requestUrl methodType:(NSString *)method parameters:(NSDictionary *)parameters respondeHandler:(ResponseHandlerBlock)block {
+    [self performRequest:requestUrl
+                  header:nil
+              methodType:method
+              parameters:parameters
+         respondeHandler:block];
+}
+
+-(void)performRequest:(NSString *)requestUrl header:(NSDictionary *)header methodType:(NSString *)method parameters:(NSDictionary *)parameters respondeHandler:(ResponseHandlerBlock)block {
+    
     NSURL *url = [NSURL URLWithString:requestUrl];
-    NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url];
-    NSURLSessionDataTask *dataTask = [self.manager dataTaskWithRequest:request completionHandler:block];
+    NSMutableURLRequest *request = parameters ? [DVCNetClient generateRequest:requestUrl
+                                                            withMethod:method
+                                                        withParameters:parameters]
+            : [[NSMutableURLRequest alloc] initWithURL:url];
+    NSMutableDictionary *requestHeader = [[DVCNetClient defaultHeader] copy];
+    if (header) {
+        [requestHeader addEntriesFromDictionary:header];
+    }
+    [request setAllHTTPHeaderFields:requestHeader];
+    NSURLSessionDataTask *dataTask = [self.manager dataTaskWithRequest:request
+                                                     completionHandler:block];
     [dataTask resume];
 }
+
+
 @end

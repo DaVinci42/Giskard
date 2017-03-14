@@ -9,7 +9,7 @@
 #import "LoginViewController.h"
 #import <UIKit/UIWebView.h>
 #import <UIKit/UIScreen.h>
-#import "LoginModel.h"
+#import "GSKNetClient.h"
 #import "ApiConfig.h"
 
 @interface LoginViewController ()<UIWebViewDelegate>
@@ -33,18 +33,42 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
-    NSURLRequest *request = [LoginModel buildLoginRequest];
+    NSURLRequest *request = [GSKNetClient buildLoginRequest];
     [_webView loadRequest:request];
 }
 
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-    NSString *url = [request URL].absoluteString;
-    if ([url localizedStandardContainsString:kRedirectUri]) {
+    // https://yourredirecturi.com/
+    //  ?code=[AUTHORIZATION_CODE]
+    //  &state=[CSRF_PROTECTION_STRING]
+    NSString *code = nil;
+    NSString *state =nil;
+    NSURLComponents *components = [NSURLComponents componentsWithURL:request.URL
+                                             resolvingAgainstBaseURL:NO];
+    for (NSURLQueryItem *item in components.queryItems) {
+        if ([item.name compare:@"code" options:NSCaseInsensitiveSearch] == NSOrderedSame) {
+            code = item.value;
+        }
+        if ([item.name compare:@"state" options:NSCaseInsensitiveSearch] == NSOrderedSame) {
+            state = item.value;
+        }
+    }
+    if ([state compare:GSKCsrfProtectionString options:NSCaseInsensitiveSearch] == NSOrderedSame && code) {
+        [GSKNetClient obtainAccessAndRefreshToken:code
+                              respondeHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+                                  if (error) {
+                                      NSLog(@"error: %@", error);
+                                  } else {
+                                      NSLog(@"response: %@", responseObject);
+                                      NSString *accessToken = responseObject[@"access_token"];
+                                      NSString *refreshToken = responseObject[@"refresh_token"];
+                                      
+                                      // TODO token saving
+                                  }
+                              }];
         return NO;
     }
     return YES;
 }
-
-
 
 @end

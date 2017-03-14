@@ -9,12 +9,15 @@
 #ifndef ApiConfig_h
 #define ApiConfig_h
 
-#define kGET @"GET"
-#define KPOST @"POST"
+static NSString * const kGET = @"GET";
+static NSString * const KPOST = @"POST";
 
-#define kClientId @""
-#define kClientSecret @""
-#define kRedirectUri @""
-#define kCSRFProtectionString @""
+static NSString * const GSKClientId = nil;
+static NSString * const GSKClientSecret = nil;
+static NSString * const GSKRedirectUri = nil;
+static NSString * const GSKCsrfProtectionString = nil;
+
+static NSString * const GSKOAuthUrl = @"https://www.inoreader.com/oauth2/auth";
+static NSString * const GSKObtainAccessAndRefreshToken = @"https://www.inoreader.com/oauth2/token";
 
 #endif /* ApiConfig_h */

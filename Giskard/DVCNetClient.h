@@ -9,21 +9,28 @@
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
 
-#define kGET @"GET"
-#define kPOST @"POST"
-
 typedef void(^ResponseHandlerBlock)(NSURLResponse *response, id responseObject, NSError *error);
 
 @interface DVCNetClient : NSObject
 
 +(instancetype)sharedClient;
 
-+(NSURLRequest *)generateRequest:(NSString *) url
++(NSMutableURLRequest *)generateRequest:(NSString *) url
                        withMethod:(NSString *) method
                    withParameters:(NSDictionary *) parameters;
 
--(void)performGetRequest:(NSString *)requestUrl
-     withRespondeHandler:(ResponseHandlerBlock) block;
+-(void)performRequest:(NSString *) requestUrl
+           methodType:(NSString *) method
+           parameters:(NSDictionary *) parameters
+      respondeHandler:(ResponseHandlerBlock) block;
+
+-(void)performRequest:(NSString *) requestUrl
+               header:(NSDictionary *) header
+           methodType:(NSString *) method
+           parameters:(NSDictionary *) parameters
+      respondeHandler:(ResponseHandlerBlock) block;
+
++(NSDictionary *)defaultHeader;
 
 @property(nonatomic, strong) AFURLSessionManager *manager;
 
