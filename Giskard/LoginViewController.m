@@ -10,7 +10,7 @@
 #import <UIKit/UIWebView.h>
 #import <UIKit/UIScreen.h>
 #import "GSKNetClient.h"
-#import "ApiConfig.h"
+#import "GSKApiConfig.h"
 
 @interface LoginViewController ()<UIWebViewDelegate>
 
@@ -62,8 +62,13 @@
                                       NSLog(@"response: %@", responseObject);
                                       NSString *accessToken = responseObject[@"access_token"];
                                       NSString *refreshToken = responseObject[@"refresh_token"];
+                                      NSNumber *expiresInSecond = responseObject[@"expires_in"];
                                       
-                                      // TODO token saving
+                                      NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+                                      [userDefault setObject:accessToken forKey:GSKUserDefaultAccessToken];
+                                      [userDefault setObject:refreshToken forKey:GSKUserDefaultRefreshToken];
+                                      [userDefault setObject:expiresInSecond forKey:GSKUserDefaultExpiresInSecond];
+                                      [userDefault synchronize];
                                   }
                               }];
         return NO;

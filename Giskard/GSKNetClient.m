@@ -7,7 +7,7 @@
 //
 
 #import "GSKNetClient.h"
-#import "ApiConfig.h"
+#import "GSKApiConfig.h"
 
 @implementation GSKNetClient
 

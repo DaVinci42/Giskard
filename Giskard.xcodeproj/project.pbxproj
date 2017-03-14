@@ -54,9 +54,9 @@
 		694CBA991E71098700AEB7FD /* DVCNetClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVCNetClient.m; sourceTree = "<group>"; };
 		69986A7F1E724E1300D89455 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		69986A801E724E1300D89455 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		69986A841E727BDC00D89455 /* ApiConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiConfig.h; sourceTree = "<group>"; };
 		69986F2A1E77EE60009635B8 /* GSKNetClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSKNetClient.h; sourceTree = "<group>"; };
 		69986F2B1E77EE60009635B8 /* GSKNetClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSKNetClient.m; sourceTree = "<group>"; };
+		69986F311E7809AB009635B8 /* GSKApiConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSKApiConfig.h; sourceTree = "<group>"; };
 		69A7B40B1E693DA10099C735 /* Giskard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giskard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69A7B40F1E693DA10099C735 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		69A7B4111E693DA10099C735 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -139,13 +139,13 @@
 		69108A611E6E4F4400C91B24 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				69986F311E7809AB009635B8 /* GSKApiConfig.h */,
 				69108A5E1E6E4F1B00C91B24 /* ArticleItem.h */,
 				69108A5F1E6E4F1B00C91B24 /* ArticleItem.m */,
 				694CBA981E71098700AEB7FD /* DVCNetClient.h */,
 				694CBA991E71098700AEB7FD /* DVCNetClient.m */,
 				69986F2A1E77EE60009635B8 /* GSKNetClient.h */,
 				69986F2B1E77EE60009635B8 /* GSKNetClient.m */,
-				69986A841E727BDC00D89455 /* ApiConfig.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
