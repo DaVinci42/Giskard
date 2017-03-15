@@ -9,13 +9,19 @@
 #ifndef GSKApiConfig_h
 #define GSKApiConfig_h
 
+typedef NS_ENUM(NSUInteger, GSKTokenStatus) {
+    GSKTokenEmpty,
+    GSKTokenExpired,
+    GSKTokenValid
+};
+
 static NSString * const kGET = @"GET";
 static NSString * const KPOST = @"POST";
 
 // user default
 static NSString * const GSKUserDefaultAccessToken = @"access_token";
 static NSString * const GSKUserDefaultRefreshToken = @"refresh_token";
-static NSString * const GSKUserDefaultExpiresInSecond = @"expires_in";
+static NSString * const GSKUserDefaultExpiresDate = @"expires_date";
 
 // app authentication
 static NSString * const GSKClientId = @"";

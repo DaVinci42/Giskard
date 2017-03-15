@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIViewController.h>
+#import "GSKApiConfig.h"
 
 @interface LoginViewController : UIViewController
 
-+(BOOL)isTokenValid;
++(GSKTokenStatus)isTokenValid;
 
 @end

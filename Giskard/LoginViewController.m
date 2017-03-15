@@ -10,7 +10,6 @@
 #import <UIKit/UIWebView.h>
 #import <UIKit/UIScreen.h>
 #import "GSKNetClient.h"
-#import "GSKApiConfig.h"
 
 @interface LoginViewController ()<UIWebViewDelegate>
 
@@ -20,8 +19,19 @@
 
 @implementation LoginViewController
 
-+(BOOL)isTokenValid {
-    return NO;
++(GSKTokenStatus)isTokenValid {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSString *accessToken = [userDefault objectForKey:GSKUserDefaultAccessToken];
+    NSString *refreshToken = [userDefault objectForKey:GSKUserDefaultRefreshToken];
+    NSDate *expiredDate = [userDefault objectForKey:GSKUserDefaultExpiresDate];
+    
+    if (!accessToken || !refreshToken
+        || [accessToken length] == 0 || [refreshToken length] == 0) {
+        return GSKTokenEmpty;
+    } else if ([expiredDate compare:[NSDate date]] == NSOrderedAscending) {
+        return GSKTokenExpired;
+    }
+    return GSKTokenValid;
 }
 
 -(void)loadView {
@@ -58,16 +68,18 @@
                               respondeHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
                                   if (error) {
                                       NSLog(@"error: %@", error);
-                                  } else {
+                                  } else if ([responseObject isKindOfClass:[NSDictionary class]]) {
                                       NSLog(@"response: %@", responseObject);
                                       NSString *accessToken = responseObject[@"access_token"];
                                       NSString *refreshToken = responseObject[@"refresh_token"];
-                                      NSNumber *expiresInSecond = responseObject[@"expires_in"];
+                                      double expiresInSec = [responseObject[@"expires_in"] doubleValue];
+                                      NSDate *expiresDate = [[NSDate alloc] initWithTimeInterval:expiresInSec
+                                                                                       sinceDate:[NSDate date]];
                                       
                                       NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
                                       [userDefault setObject:accessToken forKey:GSKUserDefaultAccessToken];
                                       [userDefault setObject:refreshToken forKey:GSKUserDefaultRefreshToken];
-                                      [userDefault setObject:expiresInSecond forKey:GSKUserDefaultExpiresInSecond];
+                                      [userDefault setObject:expiresDate forKey:GSKUserDefaultExpiresDate];
                                       [userDefault synchronize];
                                   }
                               }];
