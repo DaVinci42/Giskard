@@ -10,4 +10,11 @@
 
 @interface ArticleTableViewCell : UITableViewCell
 
+@property(nonatomic, strong) UILabel *_titleLabel;
+
+@property(nonatomic, strong) UILabel *_sourceLabel;
+
+// FIXME: should use something like FlexLayout
+@property(nonatomic, strong) UILabel *_tagLabel;
+
 @end
