@@ -11,9 +11,9 @@
 
 @interface GSKNetClient : DVCNetClient
 
-+(NSURLRequest *)buildLoginRequest;
++ (NSURLRequest *)buildLoginRequest;
 
-+(void) obtainAccessAndRefreshToken: (NSString *) authorizationCode
-                    respondeHandler:(ResponseHandlerBlock) block;
++ (void)obtainAccessAndRefreshToken:(NSString *)authorizationCode
+                    respondeHandler:(ResponseHandlerBlock)block;
 
 @end

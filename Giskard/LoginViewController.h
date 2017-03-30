@@ -12,6 +12,6 @@
 
 @interface LoginViewController : UIViewController
 
-+(GSKTokenStatus)isTokenValid;
++ (GSKTokenStatus)isTokenValid;
 
 @end

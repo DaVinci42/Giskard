@@ -7,7 +7,6 @@
 //
 
 #import "DVCNetClient.h"
-#import <AFNetworking/AFNetworking.h>
 
 @interface DVCNetClient ()
 
@@ -23,18 +22,18 @@ static const NSDictionary *kHeader = nil;
 
 @implementation DVCNetClient
 
--(instancetype)initPrivate {
+- (instancetype)initPrivate {
     self = [super init];
     return self;
 }
 
--(instancetype)init {
+- (instancetype)init {
     @throw [NSException exceptionWithName:@"Singleton"
                                    reason:@"try using [DVCNetClient sharedClient]"
                                  userInfo:nil];
 }
 
-+(instancetype)sharedClient {
++ (instancetype)sharedClient {
     if (!sharedClient) {
         sharedClient = [[DVCNetClient alloc] initPrivate];
         NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
@@ -43,18 +42,18 @@ static const NSDictionary *kHeader = nil;
     return sharedClient;
 }
 
-+(NSMutableURLRequest *)generateRequest:(NSString *)url withMethod:(NSString *)method withParameters:(NSDictionary *)parameters {
++ (NSMutableURLRequest *)generateRequest:(NSString *)url withMethod:(NSString *)method withParameters:(NSDictionary *)parameters {
     return [[AFHTTPRequestSerializer serializer] requestWithMethod:method
                                                          URLString:url
                                                         parameters:parameters
                                                              error:nil];
 }
 
-+(NSDictionary *)defaultHeader {
++ (NSDictionary *)defaultHeader {
     return nil;
 }
 
--(void)performRequest:(NSString *)requestUrl methodType:(NSString *)method parameters:(NSDictionary *)parameters respondeHandler:(ResponseHandlerBlock)block {
+- (void)performRequest:(NSString *)requestUrl methodType:(NSString *)method parameters:(NSDictionary *)parameters respondeHandler:(ResponseHandlerBlock)block {
     [self performRequest:requestUrl
                   header:nil
               methodType:method
@@ -62,12 +61,12 @@ static const NSDictionary *kHeader = nil;
          respondeHandler:block];
 }
 
--(void)performRequest:(NSString *)requestUrl header:(NSDictionary *)header methodType:(NSString *)method parameters:(NSDictionary *)parameters respondeHandler:(ResponseHandlerBlock)block {
-    
+- (void)performRequest:(NSString *)requestUrl header:(NSDictionary *)header methodType:(NSString *)method parameters:(NSDictionary *)parameters respondeHandler:(ResponseHandlerBlock)block {
+
     NSURL *url = [NSURL URLWithString:requestUrl];
     NSMutableURLRequest *request = parameters ? [DVCNetClient generateRequest:requestUrl
-                                                            withMethod:method
-                                                        withParameters:parameters]
+                                                                   withMethod:method
+                                                               withParameters:parameters]
             : [[NSMutableURLRequest alloc] initWithURL:url];
     NSMutableDictionary *requestHeader = [[DVCNetClient defaultHeader] copy];
     if (header) {

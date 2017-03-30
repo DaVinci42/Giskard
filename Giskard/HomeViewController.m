@@ -8,18 +8,17 @@
 
 #import "HomeViewController.h"
 #import "ArticleTableTableViewController.h"
-#import "DVCNetClient.h"
 
 @interface HomeViewController ()
 
-@property (nonatomic, strong) ArticleTableTableViewController *articleTableViewController;
+@property(nonatomic, strong) ArticleTableTableViewController *articleTableViewController;
 
 @end
 
 
 @implementation HomeViewController
 
--(void) viewDidLoad {
+- (void)viewDidLoad {
     _articleTableViewController = [[ArticleTableTableViewController alloc] init];
     [self.view addSubview:_articleTableViewController.view];
 }

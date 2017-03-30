@@ -13,24 +13,24 @@ typedef void(^ResponseHandlerBlock)(NSURLResponse *response, id responseObject, 
 
 @interface DVCNetClient : NSObject
 
-+(instancetype)sharedClient;
++ (instancetype)sharedClient;
 
-+(NSMutableURLRequest *)generateRequest:(NSString *) url
-                       withMethod:(NSString *) method
-                   withParameters:(NSDictionary *) parameters;
++ (NSMutableURLRequest *)generateRequest:(NSString *)url
+                              withMethod:(NSString *)method
+                          withParameters:(NSDictionary *)parameters;
 
--(void)performRequest:(NSString *) requestUrl
-           methodType:(NSString *) method
-           parameters:(NSDictionary *) parameters
-      respondeHandler:(ResponseHandlerBlock) block;
+- (void)performRequest:(NSString *)requestUrl
+            methodType:(NSString *)method
+            parameters:(NSDictionary *)parameters
+       respondeHandler:(ResponseHandlerBlock)block;
 
--(void)performRequest:(NSString *) requestUrl
-               header:(NSDictionary *) header
-           methodType:(NSString *) method
-           parameters:(NSDictionary *) parameters
-      respondeHandler:(ResponseHandlerBlock) block;
+- (void)performRequest:(NSString *)requestUrl
+                header:(NSDictionary *)header
+            methodType:(NSString *)method
+            parameters:(NSDictionary *)parameters
+       respondeHandler:(ResponseHandlerBlock)block;
 
-+(NSDictionary *)defaultHeader;
++ (NSDictionary *)defaultHeader;
 
 @property(nonatomic, strong) AFURLSessionManager *manager;
 

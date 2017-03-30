@@ -17,33 +17,33 @@
 //  &response_type=code
 //  &scope=[OPTIONAL_SCOPES]
 //  &state=[CSRF_PROTECTION_STRING]
-+(NSURLRequest *)buildLoginRequest {
++ (NSURLRequest *)buildLoginRequest {
     NSString *url = GSKOAuthUrl;
     NSDictionary *parameters = @{@"client_id": GSKClientId,
-                                 @"redirect_uri": GSKRedirectUri,
-                                 @"response_type": @"code",
-                                 @"scope": @"read",
-                                 @"state": GSKCsrfProtectionString};
+            @"redirect_uri": GSKRedirectUri,
+            @"response_type": @"code",
+            @"scope": @"read",
+            @"state": GSKCsrfProtectionString};
     return [GSKNetClient generateRequest:url
                               withMethod:kGET
                           withParameters:parameters];
 }
 
-+(NSDictionary *)defaultHeader {
++ (NSDictionary *)defaultHeader {
     return @{@"AppId": GSKClientId,
-             @"AppKey": GSKClientSecret};
+            @"AppKey": GSKClientSecret};
 }
 
-+(void)obtainAccessAndRefreshToken:(NSString *)authorizationCode respondeHandler:(ResponseHandlerBlock)block {
-    NSDictionary * parameters = @{@"code": authorizationCode,
-                                  @"redirect_uri": GSKRedirectUri,
-                                  @"client_id": GSKClientId,
-                                  @"client_secret": GSKClientSecret,
-                                  @"scope": @"read",
-                                  @"grant_type": @"authorization_code"};
-    
++ (void)obtainAccessAndRefreshToken:(NSString *)authorizationCode respondeHandler:(ResponseHandlerBlock)block {
+    NSDictionary *parameters = @{@"code": authorizationCode,
+            @"redirect_uri": GSKRedirectUri,
+            @"client_id": GSKClientId,
+            @"client_secret": GSKClientSecret,
+            @"scope": @"read",
+            @"grant_type": @"authorization_code"};
+
     return [[GSKNetClient sharedClient] performRequest:GSKObtainAccessAndRefreshToken
-                                                header: @{@"Content-type": @"application/x-www-form-urlencoded"}
+                                                header:@{@"Content-type": @"application/x-www-form-urlencoded"}
                                             methodType:@"POST"
                                             parameters:parameters
                                        respondeHandler:block];

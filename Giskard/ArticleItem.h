@@ -10,6 +10,6 @@
 
 @interface ArticleItem : NSObject
 
-@property (nonatomic, weak) NSString *title;
+@property(nonatomic, weak) NSString *title;
 
 @end
