@@ -8,19 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		1E89CD76C4756207D512FEF0 /* libPods-GiskardUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6D0FF46D2499E5B4D68AED /* libPods-GiskardUITests.a */; };
-		69108A601E6E4F1B00C91B24 /* ArticleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69108A5F1E6E4F1B00C91B24 /* ArticleItem.m */; };
-		694CBA9A1E71098700AEB7FD /* DVCNetClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 694CBA991E71098700AEB7FD /* DVCNetClient.m */; };
-		69986A811E724E1300D89455 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69986A801E724E1300D89455 /* LoginViewController.m */; };
-		69986F2C1E77EE60009635B8 /* GSKNetClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 69986F2B1E77EE60009635B8 /* GSKNetClient.m */; };
+		3D40E0E4960D5682584812CA /* GSKNotebookMetaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D40EB37DD2E0F961ED5C240 /* GSKNotebookMetaItem.m */; };
+		3D40E3BC30B6D02947524327 /* GSKNoteContentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D40E4AC1D1FA23C5874DC93 /* GSKNoteContentItem.m */; };
+		3D40E69DD7672CD05972A978 /* GSKCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D40EBC3D7C2BBB497A086F4 /* GSKCellItem.m */; };
+		3D40ECA5918345501520ED85 /* GSKTestCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D40E29AA5049F9D1FA506C0 /* GSKTestCore.m */; };
+		3D40EE30E7E6813DFCB70874 /* GSKNoteMetaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D40EBADED530FD90C624413 /* GSKNoteMetaItem.m */; };
 		69A7B4101E693DA10099C735 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B40F1E693DA10099C735 /* main.m */; };
 		69A7B4131E693DA10099C735 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B4121E693DA10099C735 /* AppDelegate.m */; };
 		69A7B4191E693DA10099C735 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A7B4171E693DA10099C735 /* Main.storyboard */; };
-		69A7B41C1E693DA10099C735 /* Giskard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B41A1E693DA10099C735 /* Giskard.xcdatamodeld */; };
 		69A7B41E1E693DA10099C735 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69A7B41D1E693DA10099C735 /* Assets.xcassets */; };
 		69A7B4211E693DA10099C735 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A7B41F1E693DA10099C735 /* LaunchScreen.storyboard */; };
 		69A7B42C1E693DA10099C735 /* GiskardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B42B1E693DA10099C735 /* GiskardTests.m */; };
 		69A7B4371E693DA10099C735 /* GiskardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B4361E693DA10099C735 /* GiskardUITests.m */; };
-		69A7B4461E693DDF0099C735 /* ArticleTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B4451E693DDF0099C735 /* ArticleTableTableViewController.m */; };
+		69A7B4461E693DDF0099C735 /* NoteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B4451E693DDF0099C735 /* NoteTableViewController.m */; };
 		69A7B4491E693EFF0099C735 /* ArticleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B4481E693EFF0099C735 /* ArticleTableViewCell.m */; };
 		69A7B44C1E6940F00099C735 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B44B1E6940F00099C735 /* HomeViewController.m */; };
 		907ACD87FE5D88D1EB89D80E /* libPods-Giskard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D25AF6ECD61B2F62EB01CD /* libPods-Giskard.a */; };
@@ -46,23 +46,23 @@
 
 /* Begin PBXFileReference section */
 		3C5384D101407056CE7E9593 /* Pods-GiskardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiskardTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GiskardTests/Pods-GiskardTests.release.xcconfig"; sourceTree = "<group>"; };
+		3D40E03A54CE1D4C41A09732 /* GSKNotebookMetaItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSKNotebookMetaItem.h; sourceTree = "<group>"; };
+		3D40E29AA5049F9D1FA506C0 /* GSKTestCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSKTestCore.m; sourceTree = "<group>"; };
+		3D40E4AC1D1FA23C5874DC93 /* GSKNoteContentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSKNoteContentItem.m; sourceTree = "<group>"; };
+		3D40E9266A62F5E870B5D6B8 /* GSKCellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSKCellItem.h; sourceTree = "<group>"; };
+		3D40E9A5900B7C254DF632BF /* GSKNoteContentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSKNoteContentItem.h; sourceTree = "<group>"; };
+		3D40EB37DD2E0F961ED5C240 /* GSKNotebookMetaItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSKNotebookMetaItem.m; sourceTree = "<group>"; };
+		3D40EB8D51D2F06109BF9624 /* GSKNoteMetaItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSKNoteMetaItem.h; sourceTree = "<group>"; };
+		3D40EBADED530FD90C624413 /* GSKNoteMetaItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSKNoteMetaItem.m; sourceTree = "<group>"; };
+		3D40EBC3D7C2BBB497A086F4 /* GSKCellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSKCellItem.m; sourceTree = "<group>"; };
+		3D40EEFC04122C7A6CF89F15 /* GSKTestCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSKTestCore.h; sourceTree = "<group>"; };
 		4C8D72169088419E11BD8D6E /* libPods-GiskardTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GiskardTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62A3F245F845B458ABDB8207 /* Pods-GiskardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiskardUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GiskardUITests/Pods-GiskardUITests.release.xcconfig"; sourceTree = "<group>"; };
-		69108A5E1E6E4F1B00C91B24 /* ArticleItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleItem.h; sourceTree = "<group>"; };
-		69108A5F1E6E4F1B00C91B24 /* ArticleItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleItem.m; sourceTree = "<group>"; };
-		694CBA981E71098700AEB7FD /* DVCNetClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVCNetClient.h; sourceTree = "<group>"; };
-		694CBA991E71098700AEB7FD /* DVCNetClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVCNetClient.m; sourceTree = "<group>"; };
-		69986A7F1E724E1300D89455 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		69986A801E724E1300D89455 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		69986F2A1E77EE60009635B8 /* GSKNetClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSKNetClient.h; sourceTree = "<group>"; };
-		69986F2B1E77EE60009635B8 /* GSKNetClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSKNetClient.m; sourceTree = "<group>"; };
-		69986F311E7809AB009635B8 /* GSKApiConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSKApiConfig.h; sourceTree = "<group>"; };
 		69A7B40B1E693DA10099C735 /* Giskard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giskard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69A7B40F1E693DA10099C735 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		69A7B4111E693DA10099C735 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		69A7B4121E693DA10099C735 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		69A7B4181E693DA10099C735 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		69A7B41B1E693DA10099C735 /* Giskard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Giskard.xcdatamodel; sourceTree = "<group>"; };
 		69A7B41D1E693DA10099C735 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69A7B4201E693DA10099C735 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69A7B4221E693DA10099C735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,12 +72,13 @@
 		69A7B4321E693DA10099C735 /* GiskardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiskardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69A7B4361E693DA10099C735 /* GiskardUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GiskardUITests.m; sourceTree = "<group>"; };
 		69A7B4381E693DA10099C735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		69A7B4441E693DDF0099C735 /* ArticleTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleTableTableViewController.h; sourceTree = "<group>"; };
-		69A7B4451E693DDF0099C735 /* ArticleTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleTableTableViewController.m; sourceTree = "<group>"; };
+		69A7B4441E693DDF0099C735 /* NoteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteTableViewController.h; sourceTree = "<group>"; };
+		69A7B4451E693DDF0099C735 /* NoteTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteTableViewController.m; sourceTree = "<group>"; };
 		69A7B4471E693EFF0099C735 /* ArticleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleTableViewCell.h; sourceTree = "<group>"; };
 		69A7B4481E693EFF0099C735 /* ArticleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleTableViewCell.m; sourceTree = "<group>"; };
 		69A7B44A1E6940F00099C735 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		69A7B44B1E6940F00099C735 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		69E6BB0C1E9DC3D900FC89F4 /* GSKDataProtocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSKDataProtocal.h; sourceTree = "<group>"; };
 		6A1A9AA0C067CD64A546E2B3 /* Pods-Giskard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giskard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Giskard/Pods-Giskard.debug.xcconfig"; sourceTree = "<group>"; };
 		8E8F01C2B5C1515085799552 /* Pods-GiskardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiskardTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GiskardTests/Pods-GiskardTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C6D0FF46D2499E5B4D68AED /* libPods-GiskardUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GiskardUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,13 +140,17 @@
 		69108A611E6E4F4400C91B24 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				69986F311E7809AB009635B8 /* GSKApiConfig.h */,
-				69108A5E1E6E4F1B00C91B24 /* ArticleItem.h */,
-				69108A5F1E6E4F1B00C91B24 /* ArticleItem.m */,
-				694CBA981E71098700AEB7FD /* DVCNetClient.h */,
-				694CBA991E71098700AEB7FD /* DVCNetClient.m */,
-				69986F2A1E77EE60009635B8 /* GSKNetClient.h */,
-				69986F2B1E77EE60009635B8 /* GSKNetClient.m */,
+				69E6BB0C1E9DC3D900FC89F4 /* GSKDataProtocal.h */,
+				3D40EBC3D7C2BBB497A086F4 /* GSKCellItem.m */,
+				3D40E9266A62F5E870B5D6B8 /* GSKCellItem.h */,
+				3D40E4AC1D1FA23C5874DC93 /* GSKNoteContentItem.m */,
+				3D40E9A5900B7C254DF632BF /* GSKNoteContentItem.h */,
+				3D40EBADED530FD90C624413 /* GSKNoteMetaItem.m */,
+				3D40EB8D51D2F06109BF9624 /* GSKNoteMetaItem.h */,
+				3D40EB37DD2E0F961ED5C240 /* GSKNotebookMetaItem.m */,
+				3D40E03A54CE1D4C41A09732 /* GSKNotebookMetaItem.h */,
+				3D40E29AA5049F9D1FA506C0 /* GSKTestCore.m */,
+				3D40EEFC04122C7A6CF89F15 /* GSKTestCore.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -177,16 +182,13 @@
 			children = (
 				69A7B4111E693DA10099C735 /* AppDelegate.h */,
 				69A7B4121E693DA10099C735 /* AppDelegate.m */,
-				69986A7F1E724E1300D89455 /* LoginViewController.h */,
-				69986A801E724E1300D89455 /* LoginViewController.m */,
-				69A7B4441E693DDF0099C735 /* ArticleTableTableViewController.h */,
-				69A7B4451E693DDF0099C735 /* ArticleTableTableViewController.m */,
+				69A7B4441E693DDF0099C735 /* NoteTableViewController.h */,
+				69A7B4451E693DDF0099C735 /* NoteTableViewController.m */,
 				69A7B44A1E6940F00099C735 /* HomeViewController.h */,
 				69A7B44B1E6940F00099C735 /* HomeViewController.m */,
 				69108A611E6E4F4400C91B24 /* Model */,
 				69108A5D1E6E4F0100C91B24 /* View */,
 				69A7B41D1E693DA10099C735 /* Assets.xcassets */,
-				69A7B41A1E693DA10099C735 /* Giskard.xcdatamodeld */,
 				69A7B4221E693DA10099C735 /* Info.plist */,
 				69A7B41F1E693DA10099C735 /* LaunchScreen.storyboard */,
 				69A7B4171E693DA10099C735 /* Main.storyboard */,
@@ -511,16 +513,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69A7B41C1E693DA10099C735 /* Giskard.xcdatamodeld in Sources */,
-				69A7B4461E693DDF0099C735 /* ArticleTableTableViewController.m in Sources */,
+				69A7B4461E693DDF0099C735 /* NoteTableViewController.m in Sources */,
 				69A7B4131E693DA10099C735 /* AppDelegate.m in Sources */,
 				69A7B4491E693EFF0099C735 /* ArticleTableViewCell.m in Sources */,
-				694CBA9A1E71098700AEB7FD /* DVCNetClient.m in Sources */,
-				69986A811E724E1300D89455 /* LoginViewController.m in Sources */,
 				69A7B4101E693DA10099C735 /* main.m in Sources */,
-				69108A601E6E4F1B00C91B24 /* ArticleItem.m in Sources */,
 				69A7B44C1E6940F00099C735 /* HomeViewController.m in Sources */,
-				69986F2C1E77EE60009635B8 /* GSKNetClient.m in Sources */,
+				3D40E69DD7672CD05972A978 /* GSKCellItem.m in Sources */,
+				3D40E3BC30B6D02947524327 /* GSKNoteContentItem.m in Sources */,
+				3D40EE30E7E6813DFCB70874 /* GSKNoteMetaItem.m in Sources */,
+				3D40E0E4960D5682584812CA /* GSKNotebookMetaItem.m in Sources */,
+				3D40ECA5918345501520ED85 /* GSKTestCore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -777,19 +779,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		69A7B41A1E693DA10099C735 /* Giskard.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				69A7B41B1E693DA10099C735 /* Giskard.xcdatamodel */,
-			);
-			currentVersion = 69A7B41B1E693DA10099C735 /* Giskard.xcdatamodel */;
-			path = Giskard.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 69A7B4031E693DA10099C735 /* Project object */;
 }

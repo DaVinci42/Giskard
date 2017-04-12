@@ -7,11 +7,11 @@
 //
 
 #import "HomeViewController.h"
-#import "ArticleTableTableViewController.h"
+#import "NoteTableViewController.h"
 
 @interface HomeViewController ()
 
-@property(nonatomic, strong) ArticleTableTableViewController *articleTableViewController;
+@property(nonatomic, strong) NoteTableViewController *noteTableViewController;
 
 @end
 
@@ -19,8 +19,8 @@
 @implementation HomeViewController
 
 - (void)viewDidLoad {
-    _articleTableViewController = [[ArticleTableTableViewController alloc] init];
-    [self.view addSubview:_articleTableViewController.view];
+    _noteTableViewController = [[NoteTableViewController alloc] init];
+    [self.view addSubview:_noteTableViewController.view];
 }
 
 @end

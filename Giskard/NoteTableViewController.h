@@ -1,5 +1,5 @@
 //
-//  ArticleTableTableViewController.h
+//  NoteTableViewController.h
 //  Giskard
 //
 //  Created by Dan Xin on 2017/3/3.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ArticleTableTableViewController : UITableViewController
+@interface NoteTableViewController : UITableViewController
 
 @end
