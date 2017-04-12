@@ -20,7 +20,7 @@
     self = [super initWithStyle:UITableViewStylePlain];
     self.tableView.delegate = self;
 
-    _articleArray = [@[@"Hello", @"Nerd", nil] mutableCopy];
+    _articleArray = [@[@"Hello", @"Nerd"] mutableCopy];
     return self;
 }
 

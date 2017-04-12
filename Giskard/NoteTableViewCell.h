@@ -1,5 +1,5 @@
 //
-//  ArticleTableViewCell.h
+//  NoteTableViewCell.h
 //  Giskard
 //
 //  Created by Dan Xin on 2017/3/3.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ArticleTableViewCell : UITableViewCell
+@interface NoteTableViewCell : UITableViewCell
 
 @property(nonatomic, strong) UILabel *_titleLabel;
 

@@ -18,9 +18,12 @@
 
 @implementation HomeViewController
 
-- (void)viewDidLoad {
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     _noteTableViewController = [[NoteTableViewController alloc] init];
-    [self.view addSubview:_noteTableViewController.view];
+    [self presentViewController:_noteTableViewController
+                       animated:YES
+                     completion:nil];
 }
 
 @end

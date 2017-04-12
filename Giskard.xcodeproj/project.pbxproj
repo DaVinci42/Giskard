@@ -21,7 +21,7 @@
 		69A7B42C1E693DA10099C735 /* GiskardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B42B1E693DA10099C735 /* GiskardTests.m */; };
 		69A7B4371E693DA10099C735 /* GiskardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B4361E693DA10099C735 /* GiskardUITests.m */; };
 		69A7B4461E693DDF0099C735 /* NoteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B4451E693DDF0099C735 /* NoteTableViewController.m */; };
-		69A7B4491E693EFF0099C735 /* ArticleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B4481E693EFF0099C735 /* ArticleTableViewCell.m */; };
+		69A7B4491E693EFF0099C735 /* NoteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B4481E693EFF0099C735 /* NoteTableViewCell.m */; };
 		69A7B44C1E6940F00099C735 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B44B1E6940F00099C735 /* HomeViewController.m */; };
 		907ACD87FE5D88D1EB89D80E /* libPods-Giskard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D25AF6ECD61B2F62EB01CD /* libPods-Giskard.a */; };
 		F9744F07857661A1E031545F /* libPods-GiskardTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8D72169088419E11BD8D6E /* libPods-GiskardTests.a */; };
@@ -74,8 +74,8 @@
 		69A7B4381E693DA10099C735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69A7B4441E693DDF0099C735 /* NoteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteTableViewController.h; sourceTree = "<group>"; };
 		69A7B4451E693DDF0099C735 /* NoteTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteTableViewController.m; sourceTree = "<group>"; };
-		69A7B4471E693EFF0099C735 /* ArticleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleTableViewCell.h; sourceTree = "<group>"; };
-		69A7B4481E693EFF0099C735 /* ArticleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleTableViewCell.m; sourceTree = "<group>"; };
+		69A7B4471E693EFF0099C735 /* NoteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteTableViewCell.h; sourceTree = "<group>"; };
+		69A7B4481E693EFF0099C735 /* NoteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteTableViewCell.m; sourceTree = "<group>"; };
 		69A7B44A1E6940F00099C735 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		69A7B44B1E6940F00099C735 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		69E6BB0C1E9DC3D900FC89F4 /* GSKDataProtocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSKDataProtocal.h; sourceTree = "<group>"; };
@@ -131,8 +131,8 @@
 		69108A5D1E6E4F0100C91B24 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				69A7B4471E693EFF0099C735 /* ArticleTableViewCell.h */,
-				69A7B4481E693EFF0099C735 /* ArticleTableViewCell.m */,
+				69A7B4471E693EFF0099C735 /* NoteTableViewCell.h */,
+				69A7B4481E693EFF0099C735 /* NoteTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -515,7 +515,7 @@
 			files = (
 				69A7B4461E693DDF0099C735 /* NoteTableViewController.m in Sources */,
 				69A7B4131E693DA10099C735 /* AppDelegate.m in Sources */,
-				69A7B4491E693EFF0099C735 /* ArticleTableViewCell.m in Sources */,
+				69A7B4491E693EFF0099C735 /* NoteTableViewCell.m in Sources */,
 				69A7B4101E693DA10099C735 /* main.m in Sources */,
 				69A7B44C1E6940F00099C735 /* HomeViewController.m in Sources */,
 				3D40E69DD7672CD05972A978 /* GSKCellItem.m in Sources */,
