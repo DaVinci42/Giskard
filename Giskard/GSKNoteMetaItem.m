@@ -9,4 +9,5 @@
 @implementation GSKNoteMetaItem {
 
 }
+
 @end

@@ -2,6 +2,7 @@
 platform :ios, '8.0'
 
 pod 'AFNetworking', '~> 3.0'
+pod 'Masonry'
 
 target 'Giskard' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks

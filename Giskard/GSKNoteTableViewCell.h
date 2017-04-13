@@ -14,14 +14,6 @@ static NSString *const kGSKNoteTableViewCellIdentifier = @"kGSKNoteTableViewCell
 
 @interface GSKNoteTableViewCell : UITableViewCell
 
-@property(nonatomic, strong) UILabel *titleLabel;
-
-@property(nonatomic, strong) UILabel *createTimeLabel;
-
-@property(nonatomic, strong) UIImageView *notebookImageView;
-
-@property(nonatomic, strong) UILabel *notebookLabel;
-
 - (void)updateCellWithNoteMeta:(GSKNoteMetaItem *)noteMeta;
 
 @end

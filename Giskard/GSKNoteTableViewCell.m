@@ -7,13 +7,41 @@
 //
 
 #import "GSKNoteTableViewCell.h"
+#import "View+MASAdditions.h"
+
+@interface GSKNoteTableViewCell ()
+
+@property(nonatomic, strong) UILabel *titleLabel;
+@property(nonatomic, strong) UILabel *createTimeLabel;
+@property(nonatomic, strong) UILabel *notebookLabel;
+
+@end
 
 @implementation GSKNoteTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(nullable NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        // TODO: update cell using autolayout
+        UIView *contentView = self.contentView;
+        _titleLabel = [[UILabel alloc] init];
+        _titleLabel.numberOfLines = 1;
+        [contentView addSubview:_titleLabel];
+        [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(contentView);
+        }];
+
+        _createTimeLabel = [[UILabel alloc] init];
+        [contentView addSubview:_createTimeLabel];
+        [_createTimeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(_titleLabel.mas_bottom);
+        }];
+
+        _notebookLabel = [[UILabel alloc] init];
+        [contentView addSubview:_notebookLabel];
+        [_notebookLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(_createTimeLabel.mas_top);
+            make.left.equalTo(_createTimeLabel.mas_right).with.offset(16);
+        }];
     }
     return self;
 }
@@ -24,7 +52,7 @@
 
     NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970:noteMeta.created_at];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"YY-MM-dd";
+    formatter.dateFormat = @"yyyy-MM-dd";
     self.createTimeLabel.text = [formatter stringFromDate:date];
 }
 

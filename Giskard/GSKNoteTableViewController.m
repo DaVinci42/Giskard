@@ -25,6 +25,8 @@
     if (self) {
         self.tableView.delegate = self;
         [self.tableView registerClass:[GSKNoteTableViewCell class] forCellReuseIdentifier:kGSKNoteTableViewCellIdentifier];
+        // self.tableView.estimatedRowHeight=44;
+        self.tableView.rowHeight = UITableViewAutomaticDimension;
         dataCore = [GSKDataCore sharedInstance];
         _noteList = [dataCore getAllNotes];
     }
@@ -36,22 +38,15 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kGSKNoteTableViewCellIdentifier
-                                                                 forIndexPath:indexPath];
-    UIView *view = [[UIView alloc] initWithFrame:cell.bounds];
-    view.backgroundColor = [UIColor lightGrayColor];
-    [cell addSubview:view];
-
-    UILabel *title = [[UILabel alloc] initWithFrame:cell.bounds];
+    GSKNoteTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kGSKNoteTableViewCellIdentifier
+                                                                      forIndexPath:indexPath];
     GSKNoteMetaItem *noteMeta = _noteList[indexPath.row];
-    title.text = noteMeta.title;
-    [cell addSubview:title];
+    [cell updateCellWithNoteMeta:noteMeta];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     GSKNoteMetaItem *noteMeta = _noteList[indexPath.row];
-    NSMutableString *content = [dataCore getNoteContentWithNoteMeta:noteMeta];
-    NSLog(@"click content: %@", content);
+    NSLog(@"click note: %@", noteMeta);
 }
 @end
