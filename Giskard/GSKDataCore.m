@@ -112,6 +112,7 @@ static GSKDataCore *_instance;
             item.updated_at = [jsonObject[@"updated_at"] integerValue];
             item.uuid = jsonObject[@"uuid"];
             item.tags = ((NSMutableArray *) jsonObject[@"tags"]);
+            item.notebookName = notebookMeta.name;
             item.notebookUuid = notebookMeta.uuid;
             [noteMetaArray addObject:item];
         }

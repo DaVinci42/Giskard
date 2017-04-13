@@ -1,5 +1,5 @@
 //
-//  HomeViewController.h
+//  GSKHomeViewController.h
 //  Giskard
 //
 //  Created by Dan Xin on 2017/3/3.
@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIViewController.h>
+#import "DVCUIViewController.h"
 
-@interface HomeViewController : UIViewController
+@interface GSKHomeViewController : DVCUIViewController
 
 @end

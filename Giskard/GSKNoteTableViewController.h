@@ -1,5 +1,5 @@
 //
-//  NoteTableViewController.h
+//  GSKNoteTableViewController.h
 //  Giskard
 //
 //  Created by Dan Xin on 2017/3/3.
@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DVCUITableViewController.h"
 
-@interface NoteTableViewController : UITableViewController
+@interface GSKNoteTableViewController : DVCUITableViewController
 
 @end

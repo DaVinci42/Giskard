@@ -1,26 +1,26 @@
 //
-//  HomeViewController.m
+//  GSKHomeViewController.m
 //  Giskard
 //
 //  Created by Dan Xin on 2017/3/3.
 //  Copyright © 2017年 Dan Xin. All rights reserved.
 //
 
-#import "HomeViewController.h"
-#import "NoteTableViewController.h"
+#import "GSKHomeViewController.h"
+#import "GSKNoteTableViewController.h"
 
-@interface HomeViewController ()
+@interface GSKHomeViewController ()
 
-@property(nonatomic, strong) NoteTableViewController *noteTableViewController;
+@property(nonatomic, strong) GSKNoteTableViewController *noteTableViewController;
 
 @end
 
 
-@implementation HomeViewController
+@implementation GSKHomeViewController
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    _noteTableViewController = [[NoteTableViewController alloc] init];
+    _noteTableViewController = [[GSKNoteTableViewController alloc] init];
     [self presentViewController:_noteTableViewController
                        animated:YES
                      completion:nil];
