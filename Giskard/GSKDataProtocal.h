@@ -10,6 +10,7 @@
 #import "GSKNotebookMetaItem.h"
 #import "GSKNoteMetaItem.h"
 
+static NSString *const kGSKMainDirectory = @"Quiver.qvlibrary";
 static NSString *const kGSKNotebookSuffix = @".qvnotebook";
 static NSString *const kGSKNoteSuffix = @".qvnote";
 static NSString *const kGSKMetaFileName = @"meta.json";

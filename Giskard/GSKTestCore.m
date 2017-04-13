@@ -11,7 +11,8 @@
 }
 
 + (NSString *)getMainDirectory {
-    return NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    return [[NSBundle mainBundle] pathForResource:kGSKMainDirectory
+                                           ofType:nil];
 }
 
 + (NSMutableArray<GSKNotebookMetaItem *> *)getNotebookList {
