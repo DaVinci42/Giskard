@@ -4,12 +4,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GSKCellItem.h"
+#import "GSKNoteCellItem.h"
 
 
 @interface GSKNoteContentItem : NSObject
 
 @property(nonatomic, strong) NSMutableString *title;
-@property(nonatomic, strong) NSMutableArray<GSKCellItem *> *cells;
+@property(nonatomic, strong) NSMutableArray<GSKNoteCellItem *> *cells;
 
 @end

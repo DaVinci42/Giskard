@@ -7,25 +7,30 @@
 //
 
 #import "NoteTableViewController.h"
+#import "GSKDataCore.h"
 
 @interface NoteTableViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property(nonatomic) NSMutableArray *articleArray;
+@property(nonatomic) NSMutableArray<GSKNoteMetaItem *> *noteList;
 
 @end
 
-@implementation NoteTableViewController
+@implementation NoteTableViewController {
+    GSKDataCore *dataCore;
+}
 
 - (instancetype)initWithStyle:(UITableViewStyle)style {
     self = [super initWithStyle:UITableViewStylePlain];
-    self.tableView.delegate = self;
-
-    _articleArray = [@[@"Hello", @"Nerd"] mutableCopy];
+    if (self) {
+        self.tableView.delegate = self;
+        dataCore = [GSKDataCore sharedInstance];
+        _noteList = [dataCore getAllNotes];
+    }
     return self;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [_articleArray count];
+    return [_noteList count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -36,13 +41,15 @@
     [cell addSubview:view];
 
     UILabel *title = [[UILabel alloc] initWithFrame:cell.bounds];
-    title.text = _articleArray[indexPath.row];
+    GSKNoteMetaItem *noteMeta = _noteList[(NSUInteger)indexPath.row];
+    title.text = noteMeta.title;
     [cell addSubview:title];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *content = _articleArray[indexPath.row];
+    GSKNoteMetaItem *noteMeta = _noteList[(NSUInteger) indexPath.row];
+    NSMutableString *content = [dataCore getNoteContentWithNoteMeta:noteMeta];
     NSLog(@"click content: %@", content);
 }
 @end

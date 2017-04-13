@@ -3,22 +3,39 @@
 // Copyright (c) 2017 Dan Xin. All rights reserved.
 //
 
-#import "GSKTestCore.h"
+#import "GSKDataCore.h"
 
+static GSKDataCore *_instance;
 
-@implementation GSKTestCore {
+@implementation GSKDataCore {
 
 }
 
-+ (NSString *)getMainDirectory {
-    return [[NSBundle mainBundle] pathForResource:kGSKMainDirectory
-                                           ofType:nil];
++ (GSKDataCore *)sharedInstance {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance = [[GSKDataCore alloc] init];
+    });
+    return _instance;
 }
 
-+ (NSMutableArray<GSKNotebookMetaItem *> *)getNotebookList {
+- (NSString *)getLibraryDirectory {
+    switch (_libraryType) {
+        case GSKTypeTest:
+            return [[NSBundle mainBundle] pathForResource:kGSKMainDirectory
+                                                   ofType:nil];
+        case GSKTypeDropbox:
+            // TODO: dropbox
+            return nil;
+        default:
+            return nil;
+    }
+}
+
+- (NSMutableArray<GSKNotebookMetaItem *> *)getNotebookList {
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSError *pathError;
-    NSString *mainDirectory = [self getMainDirectory];
+    NSString *mainDirectory = [self getLibraryDirectory];
     NSArray *notebookFiles = [fileManager contentsOfDirectoryAtPath:mainDirectory
                                                               error:&pathError];
     NSMutableArray *notebookMetaArray = [[NSMutableArray alloc] init];
@@ -37,9 +54,10 @@
 
         NSData *jsonData = [[NSData alloc] initWithContentsOfFile:metaPath];
         NSError *jsonError;
-        id jsonObject = [NSJSONSerialization dataWithJSONObject:jsonData
-                                                        options:NSJSONWritingPrettyPrinted
+        id jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                        options:NSJSONReadingAllowFragments
                                                           error:&jsonError];
+
         if (!jsonError && [jsonObject isKindOfClass:[NSDictionary class]]) {
             GSKNotebookMetaItem *item = [[GSKNotebookMetaItem alloc] init];
             item.name = jsonObject[@"name"];
@@ -50,10 +68,20 @@
     return notebookMetaArray;
 }
 
-+ (NSMutableArray<GSKNoteMetaItem *> *)getNotesInNotebook:(GSKNotebookMetaItem *)notebookMetaItem {
-    NSString *mainDirectory = [self getMainDirectory];
+- (NSMutableArray<GSKNoteMetaItem *> *)getAllNotes {
+    NSMutableArray<GSKNoteMetaItem *> *noteList = [[NSMutableArray alloc] init];
+    NSMutableArray<GSKNotebookMetaItem *> *notebookList = [self getNotebookList];
+    for (GSKNotebookMetaItem *notebook in notebookList) {
+        NSMutableArray<GSKNoteMetaItem *> *notes = [self getNotesInNotebook:notebook];
+        [noteList addObjectsFromArray:notes];
+    }
+    return noteList;
+}
+
+- (NSMutableArray<GSKNoteMetaItem *> *)getNotesInNotebook:(GSKNotebookMetaItem *)notebookMeta {
+    NSString *mainDirectory = [self getLibraryDirectory];
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSString *notebookDir = [NSString stringWithFormat:@"%@/%@%@/", mainDirectory, notebookMetaItem.uuid, kGSKNotebookSuffix];
+    NSString *notebookDir = [NSString stringWithFormat:@"%@/%@%@/", mainDirectory, notebookMeta.uuid, kGSKNotebookSuffix];
     NSError *pathError;
     NSArray *noteFiles = [fileManager contentsOfDirectoryAtPath:notebookDir
                                                           error:&pathError];
@@ -67,15 +95,15 @@
             continue;
         }
 
-        NSString *metaPath = [NSString stringWithFormat:@"%@/%@%@/%@/%@", mainDirectory, notebookMetaItem.uuid, kGSKNotebookSuffix, note, kGSKMetaFileName];
+        NSString *metaPath = [NSString stringWithFormat:@"%@/%@%@/%@/%@", mainDirectory, notebookMeta.uuid, kGSKNotebookSuffix, note, kGSKMetaFileName];
         if (![fileManager fileExistsAtPath:metaPath]) {
             continue;
         }
 
         NSData *jsonData = [[NSData alloc] initWithContentsOfFile:metaPath];
         NSError *jsonError;
-        id jsonObject = [NSJSONSerialization dataWithJSONObject:jsonData
-                                                        options:NSJSONWritingPrettyPrinted
+        id jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                        options:NSJSONReadingAllowFragments
                                                           error:&jsonError];
         if (!jsonError && [jsonObject isKindOfClass:[NSDictionary class]]) {
             GSKNoteMetaItem *item = [[GSKNoteMetaItem alloc] init];
@@ -84,10 +112,21 @@
             item.updated_at = [jsonObject[@"updated_at"] integerValue];
             item.uuid = jsonObject[@"uuid"];
             item.tags = ((NSMutableArray *) jsonObject[@"tags"]);
+            item.notebookUuid = notebookMeta.uuid;
             [noteMetaArray addObject:item];
         }
     }
     return noteMetaArray;
+}
+
+- (NSMutableString *)getNoteContentWithNoteMeta:(GSKNoteMetaItem *)noteMeta {
+    NSString *contentPath = [NSString stringWithFormat:@"%@/%@%@/%@%@/%@", [self getLibraryDirectory],
+                                                       noteMeta.notebookUuid, kGSKNotebookSuffix,
+                                                       noteMeta.uuid, kGSKNoteSuffix,
+                                                       kGSKContentFileName];
+    return [[NSString stringWithContentsOfFile:contentPath
+                                      encoding:NSUTF8StringEncoding
+                                         error:nil] mutableCopy];
 }
 
 @end

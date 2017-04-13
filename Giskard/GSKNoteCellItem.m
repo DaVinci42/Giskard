@@ -3,10 +3,10 @@
 // Copyright (c) 2017 Dan Xin. All rights reserved.
 //
 
-#import "GSKCellItem.h"
+#import "GSKNoteCellItem.h"
 
 
-@implementation GSKCellItem {
+@implementation GSKNoteCellItem {
 
 }
 @end

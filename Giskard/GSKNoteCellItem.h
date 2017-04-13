@@ -6,7 +6,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface GSKCellItem : NSObject
+@interface GSKNoteCellItem : NSObject
 
 @property(nonatomic, strong) NSMutableString *type;
 @property(nonatomic, strong) NSMutableString *data;

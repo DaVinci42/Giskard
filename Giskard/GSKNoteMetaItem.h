@@ -14,4 +14,6 @@
 @property(nonatomic, strong) NSMutableString *title;
 @property(nonatomic, strong) NSString *uuid;
 
+@property (nonatomic, strong) NSString *notebookUuid;
+
 @end
