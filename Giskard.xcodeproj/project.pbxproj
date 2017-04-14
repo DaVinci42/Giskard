@@ -333,6 +333,7 @@
 				TargetAttributes = {
 					69A7B40A1E693DA10099C735 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = RBN2C9QTSX;
 						ProvisioningStyle = Automatic;
 					};
 					69A7B4261E693DA10099C735 = {
@@ -698,7 +699,9 @@
 			baseConfigurationReference = 6A1A9AA0C067CD64A546E2B3 /* Pods-Giskard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RBN2C9QTSX;
 				INFOPLIST_FILE = Giskard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = davinci42.com.Giskard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -710,7 +713,9 @@
 			baseConfigurationReference = FDE15D162D76CBC361090605 /* Pods-Giskard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RBN2C9QTSX;
 				INFOPLIST_FILE = Giskard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = davinci42.com.Giskard;
 				PRODUCT_NAME = "$(TARGET_NAME)";

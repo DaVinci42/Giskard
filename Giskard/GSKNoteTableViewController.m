@@ -24,9 +24,9 @@
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
         self.tableView.delegate = self;
-        [self.tableView registerClass:[GSKNoteTableViewCell class] forCellReuseIdentifier:kGSKNoteTableViewCellIdentifier];
-        // self.tableView.estimatedRowHeight=44;
+        self.tableView.estimatedRowHeight = 42;
         self.tableView.rowHeight = UITableViewAutomaticDimension;
+        [self.tableView registerClass:[GSKNoteTableViewCell class] forCellReuseIdentifier:kGSKNoteTableViewCellIdentifier];
         dataCore = [GSKDataCore sharedInstance];
         _noteList = [dataCore getAllNotes];
     }
