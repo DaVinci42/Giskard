@@ -12,6 +12,7 @@
 		3D40E3BC30B6D02947524327 /* GSKNoteContentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D40E4AC1D1FA23C5874DC93 /* GSKNoteContentItem.m */; };
 		3D40E69DD7672CD05972A978 /* GSKNoteCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D40EBC3D7C2BBB497A086F4 /* GSKNoteCellItem.m */; };
 		3D40E730CCC53865994D57EC /* DVCUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D40E455C44119073C1CFA39 /* DVCUIViewController.m */; };
+		3D40E95D7660AD1D96B12F8C /* DVCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D40EB023B099BD0B9DC3B21 /* DVCUtil.m */; };
 		3D40EBEF8C9AA55796AF4AEE /* UIView+DVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D40EC052BCC5F2A90DA0F7A /* UIView+DVC.m */; };
 		3D40ECA5918345501520ED85 /* GSKDataCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D40E29AA5049F9D1FA506C0 /* GSKDataCore.m */; };
 		3D40ED3BD25C34DD94EA0C9F /* DVCUITableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D40EFE460117DC655E39F9A /* DVCUITableViewController.m */; };
@@ -54,9 +55,11 @@
 		3D40E25050064B01C7D83610 /* DVCUITableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVCUITableViewController.h; sourceTree = "<group>"; };
 		3D40E29AA5049F9D1FA506C0 /* GSKDataCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSKDataCore.m; sourceTree = "<group>"; };
 		3D40E455C44119073C1CFA39 /* DVCUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVCUIViewController.m; sourceTree = "<group>"; };
+		3D40E45748C930200B3779C3 /* DVCUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVCUtil.h; sourceTree = "<group>"; };
 		3D40E4AC1D1FA23C5874DC93 /* GSKNoteContentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSKNoteContentItem.m; sourceTree = "<group>"; };
 		3D40E9266A62F5E870B5D6B8 /* GSKNoteCellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSKNoteCellItem.h; sourceTree = "<group>"; };
 		3D40E9A5900B7C254DF632BF /* GSKNoteContentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSKNoteContentItem.h; sourceTree = "<group>"; };
+		3D40EB023B099BD0B9DC3B21 /* DVCUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVCUtil.m; sourceTree = "<group>"; };
 		3D40EB37DD2E0F961ED5C240 /* GSKNotebookMetaItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSKNotebookMetaItem.m; sourceTree = "<group>"; };
 		3D40EB8D51D2F06109BF9624 /* GSKNoteMetaItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSKNoteMetaItem.h; sourceTree = "<group>"; };
 		3D40EBA774D9E4EE32D5E41E /* UIView+DVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DVC.h"; sourceTree = "<group>"; };
@@ -147,6 +150,8 @@
 				3D40EDD7C4F2E5A2CF9D9A7A /* DVCUIViewController.h */,
 				3D40EFE460117DC655E39F9A /* DVCUITableViewController.m */,
 				3D40E25050064B01C7D83610 /* DVCUITableViewController.h */,
+				3D40E45748C930200B3779C3 /* DVCUtil.h */,
+				3D40EB023B099BD0B9DC3B21 /* DVCUtil.m */,
 			);
 			path = DVCUtils;
 			sourceTree = "<group>";
@@ -552,6 +557,7 @@
 				3D40EBEF8C9AA55796AF4AEE /* UIView+DVC.m in Sources */,
 				3D40E730CCC53865994D57EC /* DVCUIViewController.m in Sources */,
 				3D40ED3BD25C34DD94EA0C9F /* DVCUITableViewController.m in Sources */,
+				3D40E95D7660AD1D96B12F8C /* DVCUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

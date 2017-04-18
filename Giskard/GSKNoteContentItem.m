@@ -4,9 +4,15 @@
 //
 
 #import "GSKNoteContentItem.h"
+#import "DVCUtil.h"
 
 
 @implementation GSKNoteContentItem {
 
 }
+
+- (NSString *)description {
+    return [DVCUtil generateDescription:self];
+}
+
 @end

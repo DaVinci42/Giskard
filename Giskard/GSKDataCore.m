@@ -108,8 +108,8 @@ static GSKDataCore *_instance;
         if (!jsonError && [jsonObject isKindOfClass:[NSDictionary class]]) {
             GSKNoteMetaItem *item = [[GSKNoteMetaItem alloc] init];
             item.title = jsonObject[@"title"];
-            item.created_at = [jsonObject[@"created_at"] integerValue];
-            item.updated_at = [jsonObject[@"updated_at"] integerValue];
+            item.createdAt = [jsonObject[@"created_at"] integerValue];
+            item.updatedAt = [jsonObject[@"updated_at"] integerValue];
             item.uuid = jsonObject[@"uuid"];
             item.tags = ((NSMutableArray *) jsonObject[@"tags"]);
             item.notebookName = notebookMeta.name;

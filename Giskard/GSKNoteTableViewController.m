@@ -47,6 +47,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     GSKNoteMetaItem *noteMeta = _noteList[indexPath.row];
-    NSLog(@"click note: %@", noteMeta);
+    NSString *content = [[GSKDataCore sharedInstance] getNoteContentWithNoteMeta:noteMeta];
+    NSLog(@"content: %@", content);
 }
 @end

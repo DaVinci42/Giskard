@@ -4,10 +4,15 @@
 //
 
 #import "GSKNoteMetaItem.h"
+#import "DVCUtil.h"
 
 
 @implementation GSKNoteMetaItem {
 
+}
+
+- (NSString *)description {
+    return [DVCUtil generateDescription:self];
 }
 
 @end

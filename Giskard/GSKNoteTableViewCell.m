@@ -8,7 +8,6 @@
 
 #import "GSKNoteTableViewCell.h"
 #import "View+MASAdditions.h"
-#import <Masonry.h>
 
 @interface GSKNoteTableViewCell ()
 
@@ -25,7 +24,6 @@
     if (self) {
         [self initSubviews];
         [self initConstraints];
-
     }
     return self;
 }
@@ -49,18 +47,19 @@
 
     [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(contentView).with.offset(16);
-        make.top.equalTo(contentView).with.offset(16);
+        make.top.equalTo(contentView).with.offset(8);
         make.right.equalTo(contentView).with.offset(16);
     }];
 
     [_createTimeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_titleLabel.mas_bottom);
+        make.left.equalTo(_titleLabel.mas_left);
     }];
 
     [_notebookLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_createTimeLabel.mas_top);
         make.left.equalTo(_createTimeLabel.mas_right).with.offset(16);
-        make.bottom.equalTo(contentView);
+        make.bottom.equalTo(contentView).with.offset(-8);
     }];
 }
 
@@ -68,7 +67,7 @@
     self.titleLabel.text = noteMeta.title;
     self.notebookLabel.text = noteMeta.notebookName;
 
-    NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970:noteMeta.created_at];
+    NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970:noteMeta.createdAt];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"yyyy-MM-dd";
     self.createTimeLabel.text = [formatter stringFromDate:date];

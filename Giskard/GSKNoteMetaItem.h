@@ -8,11 +8,11 @@
 
 @interface GSKNoteMetaItem : NSObject
 
-@property(nonatomic, assign) NSInteger created_at;
-@property(nonatomic, assign) NSInteger updated_at;
-@property(nonatomic, strong) NSMutableArray<NSString *> *tags;
 @property(nonatomic, strong) NSMutableString *title;
 @property(nonatomic, strong) NSString *uuid;
+@property(nonatomic, strong) NSMutableArray<NSString *> *tags;
+@property(nonatomic, assign) NSInteger createdAt;
+@property(nonatomic, assign) NSInteger updatedAt;
 
 @property (nonatomic, strong) NSString *notebookName;
 @property (nonatomic, strong) NSString *notebookUuid;

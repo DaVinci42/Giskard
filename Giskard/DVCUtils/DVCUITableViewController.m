@@ -14,5 +14,6 @@
     [super viewWillAppear:animated];
     CGFloat statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
     self.tableView.contentInset = UIEdgeInsetsMake(statusBarHeight, 0, 0, 0);
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 @end
