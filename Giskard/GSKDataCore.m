@@ -120,14 +120,36 @@ static GSKDataCore *_instance;
     return noteMetaArray;
 }
 
-- (NSMutableString *)getNoteContentWithNoteMeta:(GSKNoteMetaItem *)noteMeta {
+- (GSKNoteContentItem *)getNoteContentWithNoteMeta:(GSKNoteMetaItem *)noteMeta {
+
     NSString *contentPath = [NSString stringWithFormat:@"%@/%@%@/%@%@/%@", [self getLibraryDirectory],
                                                        noteMeta.notebookUuid, kGSKNotebookSuffix,
                                                        noteMeta.uuid, kGSKNoteSuffix,
                                                        kGSKContentFileName];
-    return [[NSString stringWithContentsOfFile:contentPath
-                                      encoding:NSUTF8StringEncoding
-                                         error:nil] mutableCopy];
+    NSData *jsonData = [[NSData alloc] initWithContentsOfFile:contentPath];
+    NSError *jsonError;
+    id jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                    options:NSJSONReadingAllowFragments
+                                                      error:&jsonError];
+    GSKNoteContentItem *contentItem = [[GSKNoteContentItem alloc] init];
+    if (jsonError || ![jsonObject isKindOfClass:[NSDictionary class]]) {
+        return contentItem;
+    }
+    contentItem.title = jsonObject[@"title"];
+    contentItem.cells = [[NSMutableArray alloc] init];
+    for (NSObject *cell in jsonObject[@"cells"]) {
+        GSKNoteCellItem *cellItem = [[GSKNoteCellItem alloc] init];
+        if ([cell isKindOfClass:[NSDictionary class]]) {
+            NSDictionary *cellDic = (NSDictionary *) cell;
+            cellItem.data = cellDic[@"data"];
+            cellItem.type = cellDic[@"type"];
+            cellItem.diagramType = cellDic[@"diagramType"];
+            cellItem.language = cellDic[@"language"];
+        }
+
+        [contentItem.cells addObject:cellItem];
+    }
+    return contentItem;
 }
 
 @end

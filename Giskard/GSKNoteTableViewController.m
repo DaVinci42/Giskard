@@ -9,15 +9,16 @@
 #import "GSKNoteTableViewController.h"
 #import "GSKDataCore.h"
 #import "GSKNoteTableViewCell.h"
+#import "GSKNoteContentViewController.h"
 
 @interface GSKNoteTableViewController () <UITableViewDataSource, UITableViewDelegate>
-
-@property(nonatomic) NSMutableArray<GSKNoteMetaItem *> *noteList;
 
 @end
 
 @implementation GSKNoteTableViewController {
-    GSKDataCore *dataCore;
+
+    NSMutableArray<GSKNoteMetaItem *> *_noteList;
+    GSKDataCore *_dataCore;
 }
 
 - (instancetype)initWithStyle:(UITableViewStyle)style {
@@ -27,8 +28,8 @@
         self.tableView.estimatedRowHeight = 42;
         self.tableView.rowHeight = UITableViewAutomaticDimension;
         [self.tableView registerClass:[GSKNoteTableViewCell class] forCellReuseIdentifier:kGSKNoteTableViewCellIdentifier];
-        dataCore = [GSKDataCore sharedInstance];
-        _noteList = [dataCore getAllNotes];
+        _dataCore = [GSKDataCore sharedInstance];
+        _noteList = [_dataCore getAllNotes];
     }
     return self;
 }
@@ -47,7 +48,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     GSKNoteMetaItem *noteMeta = _noteList[indexPath.row];
-    NSString *content = [[GSKDataCore sharedInstance] getNoteContentWithNoteMeta:noteMeta];
-    NSLog(@"content: %@", content);
+    [self presentViewController:[[GSKNoteContentViewController alloc] initWithNoteMeta:noteMeta]
+                       animated:YES
+                     completion:nil];
 }
 @end

@@ -12,11 +12,13 @@
 		3D40E3BC30B6D02947524327 /* GSKNoteContentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D40E4AC1D1FA23C5874DC93 /* GSKNoteContentItem.m */; };
 		3D40E69DD7672CD05972A978 /* GSKNoteCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D40EBC3D7C2BBB497A086F4 /* GSKNoteCellItem.m */; };
 		3D40E730CCC53865994D57EC /* DVCUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D40E455C44119073C1CFA39 /* DVCUIViewController.m */; };
+		3D40E900818C962D80ADF80A /* GSKNoteContentCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D40EC98E20C6F283A82E3BE /* GSKNoteContentCellTableViewCell.m */; };
 		3D40E95D7660AD1D96B12F8C /* DVCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D40EB023B099BD0B9DC3B21 /* DVCUtil.m */; };
 		3D40EBEF8C9AA55796AF4AEE /* UIView+DVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D40EC052BCC5F2A90DA0F7A /* UIView+DVC.m */; };
 		3D40ECA5918345501520ED85 /* GSKDataCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D40E29AA5049F9D1FA506C0 /* GSKDataCore.m */; };
 		3D40ED3BD25C34DD94EA0C9F /* DVCUITableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D40EFE460117DC655E39F9A /* DVCUITableViewController.m */; };
 		3D40EE30E7E6813DFCB70874 /* GSKNoteMetaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D40EBADED530FD90C624413 /* GSKNoteMetaItem.m */; };
+		3D40EF28A40B0C8EC5C25801 /* GSKNoteContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D40EFF1F6AE05C07230260A /* GSKNoteContentViewController.m */; };
 		692FF6291E9F1B8400B81CFD /* Quiver.qvlibrary in Resources */ = {isa = PBXBuildFile; fileRef = 692FF6281E9F1B8400B81CFD /* Quiver.qvlibrary */; };
 		69A7B4101E693DA10099C735 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B40F1E693DA10099C735 /* main.m */; };
 		69A7B4131E693DA10099C735 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A7B4121E693DA10099C735 /* AppDelegate.m */; };
@@ -66,9 +68,13 @@
 		3D40EBADED530FD90C624413 /* GSKNoteMetaItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSKNoteMetaItem.m; sourceTree = "<group>"; };
 		3D40EBC3D7C2BBB497A086F4 /* GSKNoteCellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSKNoteCellItem.m; sourceTree = "<group>"; };
 		3D40EC052BCC5F2A90DA0F7A /* UIView+DVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DVC.m"; sourceTree = "<group>"; };
+		3D40EC98E20C6F283A82E3BE /* GSKNoteContentCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSKNoteContentCellTableViewCell.m; sourceTree = "<group>"; };
 		3D40EDD7C4F2E5A2CF9D9A7A /* DVCUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVCUIViewController.h; sourceTree = "<group>"; };
+		3D40EE06206124603CB89C2E /* GSKNoteContentCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSKNoteContentCellTableViewCell.h; sourceTree = "<group>"; };
+		3D40EE56ABCB814424A2926C /* GSKNoteContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSKNoteContentViewController.h; sourceTree = "<group>"; };
 		3D40EEFC04122C7A6CF89F15 /* GSKDataCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSKDataCore.h; sourceTree = "<group>"; };
 		3D40EFE460117DC655E39F9A /* DVCUITableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVCUITableViewController.m; sourceTree = "<group>"; };
+		3D40EFF1F6AE05C07230260A /* GSKNoteContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSKNoteContentViewController.m; sourceTree = "<group>"; };
 		4C8D72169088419E11BD8D6E /* libPods-GiskardTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GiskardTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62A3F245F845B458ABDB8207 /* Pods-GiskardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiskardUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GiskardUITests/Pods-GiskardUITests.release.xcconfig"; sourceTree = "<group>"; };
 		692FF6281E9F1B8400B81CFD /* Quiver.qvlibrary */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Quiver.qvlibrary; sourceTree = "<group>"; };
@@ -161,6 +167,8 @@
 			children = (
 				69A7B4471E693EFF0099C735 /* GSKNoteTableViewCell.h */,
 				69A7B4481E693EFF0099C735 /* GSKNoteTableViewCell.m */,
+				3D40EC98E20C6F283A82E3BE /* GSKNoteContentCellTableViewCell.m */,
+				3D40EE06206124603CB89C2E /* GSKNoteContentCellTableViewCell.h */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -222,6 +230,8 @@
 				69A7B4171E693DA10099C735 /* Main.storyboard */,
 				69A7B40E1E693DA10099C735 /* Supporting Files */,
 				3D40EFE8834F5995949EE7D5 /* DVCUtils */,
+				3D40EFF1F6AE05C07230260A /* GSKNoteContentViewController.m */,
+				3D40EE56ABCB814424A2926C /* GSKNoteContentViewController.h */,
 			);
 			path = Giskard;
 			sourceTree = "<group>";
@@ -558,6 +568,8 @@
 				3D40E730CCC53865994D57EC /* DVCUIViewController.m in Sources */,
 				3D40ED3BD25C34DD94EA0C9F /* DVCUITableViewController.m in Sources */,
 				3D40E95D7660AD1D96B12F8C /* DVCUtil.m in Sources */,
+				3D40EF28A40B0C8EC5C25801 /* GSKNoteContentViewController.m in Sources */,
+				3D40E900818C962D80ADF80A /* GSKNoteContentCellTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

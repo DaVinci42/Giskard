@@ -6,6 +6,8 @@
 #import <Foundation/Foundation.h>
 #import "GSKNotebookMetaItem.h"
 #import "GSKNoteMetaItem.h"
+#import "GSKNoteCellItem.h"
+#import "GSKNoteContentItem.h"
 
 static NSString *const kGSKMainDirectory = @"Quiver.qvlibrary";
 static NSString *const kGSKNotebookSuffix = @".qvnotebook";
@@ -32,6 +34,6 @@ typedef NS_ENUM(NSInteger, GSKLibraryType) {
 
 - (NSMutableArray<GSKNoteMetaItem *> *)getNotesInNotebook:(GSKNotebookMetaItem *)notebookMeta;
 
-- (NSMutableString *)getNoteContentWithNoteMeta:(GSKNoteMetaItem *)noteMeta;
+- (GSKNoteContentItem *)getNoteContentWithNoteMeta:(GSKNoteMetaItem *)noteMeta;
 
 @end
