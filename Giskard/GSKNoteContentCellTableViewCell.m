@@ -30,7 +30,7 @@
     [contentView addSubview:_cellTypeLabel];
     [_cellTypeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(contentView).with.offset(8);
-        make.right.equalTo(contentView).with.offset(8);
+        make.right.equalTo(contentView).with.offset(-8);
         make.top.equalTo(contentView).with.offset(8);
     }];
 
@@ -38,10 +38,11 @@
     [contentView addSubview:_contentTextView];
     [_contentTextView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_cellTypeLabel.mas_bottom).with.offset(4);
-        make.left.equalTo(contentView).with.offset(8);
-        make.right.equalTo(contentView).with.offset(8);
+        make.left.equalTo(_cellTypeLabel.mas_left);
+        make.right.equalTo(_cellTypeLabel.mas_right);
         make.bottom.equalTo(contentView).with.offset(-8);
     }];
+    _contentTextView.scrollEnabled = NO;
 }
 
 - (void)updateCellWithNoteContentCell:(GSKNoteCellItem *)noteCell {

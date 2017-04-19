@@ -167,8 +167,8 @@
 			children = (
 				69A7B4471E693EFF0099C735 /* GSKNoteTableViewCell.h */,
 				69A7B4481E693EFF0099C735 /* GSKNoteTableViewCell.m */,
-				3D40EC98E20C6F283A82E3BE /* GSKNoteContentCellTableViewCell.m */,
 				3D40EE06206124603CB89C2E /* GSKNoteContentCellTableViewCell.h */,
+				3D40EC98E20C6F283A82E3BE /* GSKNoteContentCellTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -221,6 +221,8 @@
 				69A7B4451E693DDF0099C735 /* GSKNoteTableViewController.m */,
 				69A7B44A1E6940F00099C735 /* GSKHomeViewController.h */,
 				69A7B44B1E6940F00099C735 /* GSKHomeViewController.m */,
+				3D40EE56ABCB814424A2926C /* GSKNoteContentViewController.h */,
+				3D40EFF1F6AE05C07230260A /* GSKNoteContentViewController.m */,
 				69108A611E6E4F4400C91B24 /* Model */,
 				69108A5D1E6E4F0100C91B24 /* View */,
 				69A7B41D1E693DA10099C735 /* Assets.xcassets */,
@@ -230,8 +232,6 @@
 				69A7B4171E693DA10099C735 /* Main.storyboard */,
 				69A7B40E1E693DA10099C735 /* Supporting Files */,
 				3D40EFE8834F5995949EE7D5 /* DVCUtils */,
-				3D40EFF1F6AE05C07230260A /* GSKNoteContentViewController.m */,
-				3D40EE56ABCB814424A2926C /* GSKNoteContentViewController.h */,
 			);
 			path = Giskard;
 			sourceTree = "<group>";
